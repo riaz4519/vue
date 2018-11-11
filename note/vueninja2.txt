@@ -1,0 +1,77 @@
+Lesson - 1 - introduction
+
+	<script src="vue.js"></script>
+
+	just add the vue cdn link or download the file and add it to the html file and this is your installation
+
+Lesson - 2 - vue instance
+	
+	* creating a vue js instance
+
+		new Vue({
+
+		});
+
+		this is called the instance 
+		it controlled part of the application or full application .one app can have one instance or multiple instance.
+
+		* the instance will hold data ,method and all that.
+
+		*property : el - element
+
+			this property gonna define which part of the application this instance gonna control
+
+				new Vue({
+
+					el:"#app"
+
+				});
+		*property : data - 
+			where we gonna store all of our data.
+
+			data object-
+
+			data:{
+
+			},
+
+			with in this curly brackets there will be different key value pairs.
+
+			data:{
+
+				name:"fahim"
+
+			}
+
+			for out put this data we just gonna go to our app and
+
+			<h1>{{ name }}</h1>
+
+			its because its controlling the data on #app .
+
+Lesson - 3 - Data and methods
+	
+	*property - methods - its a object so it will be working like key ,value pairs .
+
+		methods:{
+
+		}
+
+		**function declearation inside methods:
+
+			methods:{
+
+				greet:function(){
+
+					return "good morning";
+
+				}
+
+			}
+		**calling the function
+
+
+		<h1></h1>
+
+
+
