@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+
+    <button v-on:dblclick="add(10)">Add a year</button>
+    <button v-on:click="sub(10)">sub a year</button>
+
+
+    <p>{{ age}}</p>
+
+
+
+</div>
+
+
+<script src="js/vue.js"></script>
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+        data:{
+            age:24,
+        },
+        methods:{
+            add:function (inc) {
+
+                this.age+=inc;
+            },
+            sub:function (dec) {
+
+                this.age-= dec;
+
+            }
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

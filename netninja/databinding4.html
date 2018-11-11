@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Binding</title>
+</head>
+<body>
+<div id="vue-app">
+
+    <a v-bind:href="link">{{greet()}}</a>
+
+</div>
+
+<!--this is for connecting the vue -->
+<script src="vue.js"></script>
+<script>
+    new Vue({
+
+        el:'#vue-app',
+        data:{
+
+            message:"hello world",
+            link:"http://www.google.com",
+
+
+        },
+        methods:{
+            greet:function () {
+
+                return "hello world";
+            }
+        }
+
+
+    })
+</script>
+
+</body>
+</html>

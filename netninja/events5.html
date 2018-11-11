@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue js Events</title>
+</head>
+<body>
+<div id="vue-app">
+    <h1>Events</h1>
+    <p>{{age}}</p>
+    <button v-on:click="add(1)">Add age </button>
+    <button v-on:click="sub(1)">Subtract age </button>
+    <button v-on:dblclick="add(10)">Add 10 </button>
+    <button v-on:dblclick="sub(10)">Subtract 10 </button>
+
+</div>
+
+<!--this is for connecting the vue -->
+<script src="vue.js"></script>
+<script>
+    new Vue({
+
+        el:'#vue-app',
+        data:{
+            age:25
+
+        },
+        methods:{
+
+            add:function (inc) {
+                this.age = this.age + inc;
+
+            },
+            sub:function (dec) {
+
+                this.age = this.age - dec;
+            }
+
+        }
+
+
+    })
+</script>
+
+</body>
+</html>
