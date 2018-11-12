@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h1>{{greet('good afternoon')}}</h1>
+    <a v-bind:href="website">Google</a>
+</div>
+
+
+
+<script src="vue.js"></script>
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+        data:{
+            name:"fahim",
+            website:"https://www.google.com/",
+        },
+        methods:{
+
+            greet:function (time) {
+                return "hello world "+time+" " + this.name;
+            }
+        }
+
+
+    });
+
+
+</script>
+</body>
+</html>

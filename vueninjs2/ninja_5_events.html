@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h1>Events</h1>
+
+    <button @click="add">Add a year</button>
+    <button @click="sub">Sub a year</button>
+    
+
+    <p>{{age}}</p>
+</div>
+
+
+
+<script src="vue.js"></script>
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+
+        data:{
+            age : 25,
+        },
+        methods:{
+
+            add:function () {
+
+
+                this.age++
+
+            },
+            sub:function () {
+
+                this.age--;
+
+            }
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

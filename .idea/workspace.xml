@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee684834-69ae-4ce5-bd21-84b430924c73" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/note/vueninja2.txt" afterPath="$PROJECT_DIR$/note/vueninja2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vueninjs2/ninja_2_instance.html" afterPath="$PROJECT_DIR$/vueninjs2/ninja_2_instance.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,21 +18,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ninja_1_intro.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_1_intro.html">
+      <file leaf-file-name="ninja_4_data_binding.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_4_data_binding.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="39">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ninja_2_instance.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_2_instance.html">
+      <file leaf-file-name="ninja_5_events.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_5_events.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ninja_3_data_methods.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_3_data_methods.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -66,6 +77,11 @@
         <option value="$PROJECT_DIR$/netninja/databinding4.html" />
         <option value="$PROJECT_DIR$/netninja/events5.html" />
         <option value="$PROJECT_DIR$/vueninjs2/ninja_1_intro.html" />
+        <option value="$PROJECT_DIR$/vueninjs2/ninja_2_instance.html" />
+        <option value="$PROJECT_DIR$/vueninjs2/ninja_3_data_methods.html" />
+        <option value="$PROJECT_DIR$/vueninjs2/ninja_4_data_binding.js" />
+        <option value="$PROJECT_DIR$/vueninjs2/ninja_4_data_binding.html" />
+        <option value="$PROJECT_DIR$/vueninjs2/ninja_5_events.html" />
       </list>
     </option>
   </component>
@@ -87,8 +103,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1373" />
-    <option name="width" value="710" />
+    <option name="x" value="-726" />
+    <option name="y" value="14" />
+    <option name="width" value="678" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectView">
@@ -106,7 +123,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -150,6 +166,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,17 +260,18 @@
       <workItem from="1534232892604" duration="35000" />
       <workItem from="1541913210141" duration="123000" />
       <workItem from="1541913348761" duration="1813000" />
+      <workItem from="1542032441647" duration="5686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18586000" />
+    <option name="totallyTimeSpent" value="24272000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1373" y="0" width="710" height="744" extended-state="1" />
+    <frame x="-726" y="14" width="678" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2651297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2734139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -283,6 +301,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_1_intro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_2_instance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_1_intro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -565,6 +599,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_2_instance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_1_intro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -573,10 +615,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_2_instance.html">
+    <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_3_data_methods.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_4_data_binding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vueninjs2/ninja_5_events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding />
         </state>
       </provider>

@@ -71,7 +71,74 @@ Lesson - 3 - Data and methods
 		**calling the function
 
 
-		<h1></h1>
+		<h1>{{ greet() }}</h1>
+
+		**function parameter
+
+			<h1>{{ greet('hello world') }}</h1>
+
+			methods:{
+
+			greet:function(time){
+
+			return "hello world "+time;
+
+			}
+
+			}
+
+		** this property
+
+			this.name not this.data.name 
+
+Lession - 4 - Data Binding
+	
+	Binding data to attribute of html element.
+
+		v-bind - directive
+
+		example:
+		<a v-bind:href="website">Google</a>
+
+		**short hand for v-bind = :
+
+
+		data:{
+
+			website:"https://www.google.com/"
+
+		}
+
+		**v-html 
+			this is for outputting html to the dom 
+
+			: does not work with v-html . : sorthand only work with v-bind which is attribute binding
+
+Lesson - 5 - Events
+
+	events are for action
+
+	** v-on or @
+
+	example v-on:click="function" or @click="function"
+
+	<button v-on:click="age++">Add sum</button>
+	<button v-on:click="add">Add sum</button>
+
+	methods:{
+
+		add:function(){
+
+			this.age++
+		}
+
+	}
+
+	***Dubble click
+
+		@dblclick
+
+
 
 
 
