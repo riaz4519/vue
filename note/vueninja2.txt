@@ -136,7 +136,26 @@ Lesson - 5 - Events
 
 	***Dubble click
 
-		@dblclick
+		@dblclick or v-on:dblclikc
+
+	***Getting the x and y with mousemove
+
+		v-on:mousemove or @mousemove
+
+		this fuction always trigger and send a event propery to the function 
+
+		@mousemove="updateXY"
+
+		updateXY:fuction(event){
+
+		event.offsetX;
+		event.offsetY;
+
+		}
+
+
+
+
 
 
 
