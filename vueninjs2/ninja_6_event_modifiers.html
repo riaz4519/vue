@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #canvas{
+            width: 600px;
+            padding:200px 20px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <h1>Events</h1>
+
+    <button @click.once="add(1)">Add a year</button>
+    <button @click="sub(1)">Sub a year</button>
+    <button @dblclick="add(10)">Add 10 year</button>
+    <button @dblclick="sub(10)">Sub 10 year</button>
+    <a @click.prevent="click" href="https://www.google.com">Click me </a>
+
+
+    <p>{{age}}</p>
+
+    <div id="canvas" @mousemove="updateXY">
+
+        {{x}},{{y}}
+
+    </div>
+</div>
+
+
+
+<script src="vue.js"></script>
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+
+        data:{
+            age : 25,
+            x:0,
+            y:0
+        },
+        methods:{
+
+            add:function (a) {
+
+
+                this.age+= a;
+
+            },
+            sub:function (b) {
+
+                this.age -= b;
+
+            },
+            updateXY:function (event) {
+
+                this.x = event.offsetX;
+                this.y = event.offsetY;
+
+            },
+            click:function () {
+
+                alert('clicked on the function');
+            }
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
