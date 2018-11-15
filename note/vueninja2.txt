@@ -153,6 +153,38 @@ Lesson - 5 - Events
 
 		}
 
+Lesson - 6 - Event modifiers
+	
+	event modifiers effect the normal behaviors of html element and events
+
+	** once event modifiers
+
+	@click.onece="add()" or v-on:click.once="add()"
+
+	** prevent - event modifiers
+
+	<a href=""v-on:click.prevent="click">click me</a>
+	
+	this link not be going to the link the we wil give to the href. it will trigger the click function
+
+Lesson - 7 - Keyboard Events & keyup modifiers
+
+	keyboard events are those which react on keyboard activities.
+
+	v-on:keyup="function" or @keyup="function"
+
+	**modifiers
+
+		for spacific key
+
+		v-on:keyup.enter="function"
+
+		this function gonna run when we press on enter button on keyboard
+
+	**two button once
+
+		v-on:keyup.alt.enter="function"
+
 
 
 
