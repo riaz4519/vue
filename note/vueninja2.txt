@@ -1,3 +1,30 @@
+
+Skip to content
+
+    Pull requests
+    Issues
+    Marketplace
+    Explore
+
+    @riaz4519
+
+1
+0
+
+    0
+
+riaz4519/vue
+Code
+Issues 0
+Pull requests 0
+Projects 0
+Wiki
+Insights
+Settings
+vue/note/vueninja2.txt
+a003823 5 hours ago
+@riaz4519 riaz4519 after dynamic css
+243 lines (117 sloc) 3.55 KB
 Lesson - 1 - introduction
 
 	<script src="vue.js"></script>
@@ -185,6 +212,16 @@ Lesson - 7 - Keyboard Events & keyup modifiers
 
 		v-on:keyup.alt.enter="function"
 
+Lession - 8 - two way data binding
+
+	** v-model="name" 
+
+	this property work as two way.
+
+	<input type="text" v-model="name">
+
+	whenever we type something on the input field it will be set the value to name and also update the value at browser
+
 Lesson - 9 - computed properties
 
 	computed property run when needed.
@@ -230,8 +267,6 @@ Lesson - 10 - dynamic css
 	
 
 	
-
-
 
 
 
