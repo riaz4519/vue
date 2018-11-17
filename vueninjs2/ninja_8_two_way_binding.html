@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>KeyBoard Events</h1>
+
+    <label>Name:</label>
+    <input type="text" v-model="name">
+    <span>{{name}}</span>
+    <label>Age:</label>
+    <input type="text" v-model="age">
+    <span>{{age}}</span>
+
+</div>
+
+
+<script src="vue.js"></script>
+<script>
+
+    new Vue({
+
+        el:"#app",
+        data:{
+            name:'',
+            age:'',
+
+        },
+        methods:{
+            logName:function (event) {
+
+
+
+            },
+            logAge:function (event) {
+
+            }
+        }
+
+
+    });
+
+</script>
+</body>
+</html>
