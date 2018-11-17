@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic class</title>
+    <style>
+
+        .available span{
+            background: green;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <h1>Dynamic class</h1>
+    <h2>Example</h2>
+    <div v-bind:class="{ available:available }">
+        <span>Fahim</span>
+    </div>
+
+</div>
+
+
+<script src="vue.js"></script>
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+        data:{
+
+            available:true,
+            nearby:false,
+
+        },
+        methods:{
+
+        },
+        computed:{
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

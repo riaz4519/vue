@@ -185,6 +185,53 @@ Lesson - 7 - Keyboard Events & keyup modifiers
 
 		v-on:keyup.alt.enter="function"
 
+Lesson - 9 - computed properties
+
+	computed property run when needed.
+
+	computed:{
+
+		addToA:function(){
+
+		},
+		addToB:function(){
+
+		}
+
+	}
+
+
+Lesson - 10 - dynamic css
+
+	adding class with v-bind:class="{}" and it must  be in single curly brackets
+
+		v-bind:class="{red:true,blue:true}"
+
+		red and blue are classes 
+
+		 **doing it dynamicly
+
+		 	data:{
+
+		 		available:true,
+		 		nearby:true,
+
+		 	}
+
+		 	now 
+
+		 	v-bind:class="{available:available}"
+
+		 	if "available is true then the elemnt will get he class of available"
+	
+
+
+
+	
+
+	
+
+
 
 
 
