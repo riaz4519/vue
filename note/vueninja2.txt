@@ -260,6 +260,48 @@ Lesson - 10 - dynamic css
 		 	v-bind:class="{available:available}"
 
 		 	if "available is true then the elemnt will get he class of available"
+
+		 	available = !available
+
+
+		 ** with computer properties
+
+		 computed :{
+
+		 compClasses:function(){
+
+		 	return {
+
+		 		available:this.available,
+
+		 	}
+
+		 }
+
+
+
+		 }
+
+
+Lesson - 11 - conditionals
+	
+	** v-if  and v-show
+
+	<p v-if="false"> show</p>
+
+	the show message will not be shown on the screen .same with the v-show method
+
+	**v-else-if=""
+
+	**difference between v-if and v-show
+
+		when we use v-if 
+
+		<p v-if="false" ></p>
+
+		then the <p> tag will disapear .on the other hand if we use v-show the <p> tags style will become "display:none"
+	
+
 	
 
 

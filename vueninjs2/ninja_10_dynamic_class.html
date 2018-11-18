@@ -18,8 +18,8 @@
 
     <h1>Dynamic class</h1>
     <h2>Example</h2>
-    <div v-bind:class="{ available:available }">
-        <span>Fahim</span>
+    <div v-bind:class="compClasses">
+        <span v-on:click="available = !available">Fahim</span>
     </div>
 
 </div>
@@ -34,7 +34,7 @@
         el:"#app",
         data:{
 
-            available:true,
+            available:false,
             nearby:false,
 
         },
@@ -42,6 +42,17 @@
 
         },
         computed:{
+
+            compClasses:function () {
+
+                return {
+
+                    available:this.available,
+
+                }
+
+
+            }
 
         }
 
