@@ -300,6 +300,48 @@ Lesson - 11 - conditionals
 		<p v-if="false" ></p>
 
 		then the <p> tag will disapear .on the other hand if we use v-show the <p> tags style will become "display:none"
+
+
+Lesson - 12 - looping with v-for 
+
+	v-for is use for looping in vue js 
+
+	** example first dimension array
+
+		characters:['fahim','naiem','mukim']
+
+		<ul>
+
+			<li v-for="character in characters">{{character}}</li>
+		
+
+		</ul>
+
+	**example second dimension or object looping
+
+
+		ninja:[
+		{name:'fahim',age:'23'}
+		]
+
+
+		<ul>
+
+			<li v-for="ninja in ninjas">{{ninja.name}} -- {{ninja.age}}<li>
+
+		</ul>
+
+		**finding index
+
+		<li  v-for="(ninja,index) in ninjas"> </li>
+
+			
+
+
+
+
+
+
 	
 
 	

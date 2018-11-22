@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Looping with v-for</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h1>Looping</h1>
+    <ul>
+        <li v-for="character in characters">{{character}}</li>
+    </ul>
+
+    <ul>
+        <li v-for="(ninja,index) in ninjas">{{index}}.{{ninja.name}} -- {{ ninja.age}}</li>
+    </ul>
+
+</div>
+
+
+<script src="vue.js"></script>
+
+<script>
+
+    new Vue({
+
+        el:"#app",
+        data:{
+
+            characters:['fahim','naiem','mukim'],
+
+            ninjas:[
+                {name:'fahim',age:'25'},
+                {name:'mukim',age:'20'},
+                {name:'naiem',age:'27'},
+
+
+            ]
+
+        },
+        methods:{
+
+        },
+        computed:{
+
+        }
+
+    });
+
+
+</script>
+
+</body>
+</html>
