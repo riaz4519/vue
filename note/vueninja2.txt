@@ -335,6 +335,30 @@ Lesson - 12 - looping with v-for
 
 		<li  v-for="(ninja,index) in ninjas"> </li>
 
+
+		** loop through <template></template>
+
+
+		when we usually loop through any elemnet it loop the the element like 
+
+		<li v-for="ninja in ninjas"></li>
+
+		But with <template></template> it does not work like that . <template loop through its child element.
+
+			<template v-for="(ninja,index) in ninjas">
+
+				<h1>{{ ninja }}</h1>
+
+			</template>
+
+		** Cycle through object in nested for
+
+		<template v-for="ninja in ninjas">
+		<div v-for="(val,key) in ninja">
+		{{ val}}{{ key}}
+		</div>
+		</template>
+
 			
 
 
