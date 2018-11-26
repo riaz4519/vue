@@ -359,6 +359,23 @@ Lesson - 12 - looping with v-for
 		</div>
 		</template>
 
+**Multiple Vue Instance
+	
+	var one = new Vue({
+
+		el:"#app1",
+
+	})
+
+	var two = new Vue({
+
+		el:"#app2",
+
+	})
+
+	now by these two vue instance variable we can change or add data to one another instance or from outside of the instance
+
+
 			
 
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Vue instanace</title>
+</head>
+<body>
+
+<div id="app1">
+    <h2>{{ title }}</h2>
+    <p>{{ greet}}</p>
+
+</div>
+
+<div id="app2">
+
+    <h2>{{ title}}</h2>
+    <p>{{ greet}}</p>
+    <button @click="changeTitle">Change app one title</button>
+
+</div>
+
+
+<script src="vue.js"></script>
+
+<script>
+
+    var one = new Vue({
+
+        el:"#app1",
+        data:{
+
+
+            title:'vue app one',
+
+        },
+        methods:{
+
+        },
+        computed:{
+
+            greet:function () {
+
+                return 'Hello form app 1';
+            }
+
+        }
+
+    });
+    var two = new Vue({
+
+        el:"#app2",
+        data:{
+            title:'vue app two',
+
+        },
+        methods: {
+
+            changeTitle:function () {
+
+                one.title = 'Hello world';
+
+            }
+
+        },
+        computed:{
+
+            greet:function () {
+
+                return 'Hello form app 2';
+            }
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
