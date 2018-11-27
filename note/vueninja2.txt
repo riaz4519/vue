@@ -359,21 +359,105 @@ Lesson - 12 - looping with v-for
 		</div>
 		</template>
 
-**Multiple Vue Instance
+Lesson - 14 - Multiple Vue Instance
 	
 	var one = new Vue({
 
 		el:"#app1",
+		data:{
+		title:"hello world",
+		},methods:{
+
+		},
+		computed:{
+		
+		}
+
 
 	})
 
 	var two = new Vue({
 
 		el:"#app2",
+		data:{
+		title:"hello world",
+		},
+		methods:{
+
+		},
+		computed:{
+
+		}
+
+
 
 	})
 
 	now by these two vue instance variable we can change or add data to one another instance or from outside of the instance
+
+Lesson - 15 - component - 
+
+	is re-useable object 
+
+
+    var data = {
+        name:'hello'
+    }
+    Vue.component('greetings',{
+
+        template:'<p>Hello world {{ name }}<button v-on:click="changeName">chnage</button></p>',
+        data:function () {
+            return{
+                name:'fahim',
+            }
+        },
+        methods: {
+            changeName: function () {
+
+                this.name = 'Mukim';
+
+            }
+        }
+
+    });
+
+    var app1 = new Vue({
+
+        el:"#app1",
+
+
+
+    });
+
+    var app2 = new Vue({
+
+        el:"#app2",
+
+    });
+
+
+Lesson - 16 - REFS
+	
+	Ref is use like a id or a class to identify them.
+	example 
+
+	<input  type="text" ref="input">
+
+	so this is how we declear ref
+
+	** now to access it
+
+		methods:{
+
+			getName:function{
+
+				this.$refs.nameOfTheRef.propertyname
+
+			}
+
+		} 
+
+
 
 
 			

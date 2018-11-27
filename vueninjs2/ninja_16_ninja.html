@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RErfs</title>
+</head>
+<body>
+
+<div id="app1">
+
+    <input type="text" ref="input">
+    <button v-on:click="getData">Click</button>
+    <p>Your Fav Food {{output }}</p>
+
+</div>
+
+
+
+<script src="vue.js"></script>
+
+<script>
+
+    var one = new Vue({
+
+        el:"#app1",
+        data:{
+            output:"",
+
+        },
+        methods:{
+
+            getData:function () {
+              this.output =  this.$refs.input.value;
+            }
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

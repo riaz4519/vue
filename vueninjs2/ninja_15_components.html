@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app1">
+
+    <greetings></greetings>
+
+</div>
+<div id="app2">
+
+    <greetings></greetings>
+
+</div>
+
+
+
+<script src="vue.js"></script>
+
+
+<script>
+
+    var data = {
+        name:'hello'
+    }
+    Vue.component('greetings',{
+
+        template:'<p>Hello world {{ name }}<button v-on:click="changeName">chnage</button></p>',
+        data:function () {
+            return{
+                name:'fahim',
+            }
+        },
+        methods: {
+            changeName: function () {
+
+                this.name = 'Mukim';
+
+            }
+        }
+
+    });
+
+    var app1 = new Vue({
+
+        el:"#app1",
+
+
+
+    });
+
+    var app2 = new Vue({
+
+        el:"#app2",
+
+    });
+</script>
+</body>
+</html>
