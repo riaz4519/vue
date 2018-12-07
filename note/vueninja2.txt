@@ -529,7 +529,7 @@ Lesson - 18 - vue files and the root component
 				},
 
 			methods:{
-			
+
 			}
 			}
 
@@ -538,6 +538,60 @@ Lesson - 18 - vue files and the root component
 
 
 Lesson - 19 - nesting and importing components
+
+	nesting is use for using component with in a component.
+
+	**creating a component
+
+		my prefer is for creating a child component first create a folder and then create the component.
+
+		create .vue file
+
+			<template>
+			    
+			    <ul>
+			        <li></li>
+			    </ul>
+			    
+			</template>
+
+			<script>
+			    
+			    export  default {
+			        
+			        data(){
+			            
+			            return {
+			                title:'Ninja app',
+			            }
+			        }
+			        
+			    }
+			    
+			</script>
+
+			<style>
+			    
+			</style>
+
+
+		Basic structure of a vue file
+
+		local and global use of component
+
+		Local:
+
+		global:
+
+			for declear a component globally ,it had to be defined with in the main.js folder
+
+				import Ninjas from './component/ninjas.vue'
+
+				Vue.component('ninja',Ninjas);
+
+
+				then we can access this component from anywhere in the app
+
 
 
 

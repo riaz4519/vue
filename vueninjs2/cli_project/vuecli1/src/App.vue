@@ -1,8 +1,9 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div >
+
     <h1>{{ title }}</h1>
     <p>{{ greetings()}}</p>
+    <ninjas></ninjas>
 
   </div>
 </template>
