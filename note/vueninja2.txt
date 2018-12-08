@@ -375,6 +375,238 @@ Lesson - 12 - looping with v-for
 
 	now by these two vue instance variable we can change or add data to one another instance or from outside of the instance
 
+<<<<<<< HEAD
+=======
+Lesson - 15 - component - 
+
+	is re-useable object 
+
+
+    var data = {
+        name:'hello'
+    }
+    Vue.component('greetings',{
+
+        template:'<p>Hello world {{ name }}<button v-on:click="changeName">chnage</button></p>',
+        data:function () {
+            return{
+                name:'fahim',
+            }
+        },
+        methods: {
+            changeName: function () {
+
+                this.name = 'Mukim';
+
+            }
+        }
+
+    });
+
+    var app1 = new Vue({
+
+        el:"#app1",
+
+
+
+    });
+
+    var app2 = new Vue({
+
+        el:"#app2",
+
+    });
+
+
+Lesson - 16 - REFS
+	
+	Ref is use like a id or a class to identify them.
+	example 
+
+	<input  type="text" ref="input">
+
+	so this is how we declear ref
+
+	** now to access it
+
+		methods:{
+
+			getName:function{
+
+				this.$refs.nameOfTheRef.propertyname
+
+			}
+
+		} 
+
+
+
+Lesson - 17 -The vue cli
+
+	**install enviornment
+
+		npm install -g @vue/cli
+
+	**Version
+		vue --version
+
+	**create vue js application
+		vue init webpack-simple <name of the project>
+		or vue create <project name>
+
+	**goto the project folder and run
+
+		cd <project name>
+
+		npm run serve
+
+
+Lesson - 18 - vue files and the root component
+
+	so all the coding and componet goes to the src folder .first we will find a main.js file and App.vue file .main.js file is for rendering our component to the website and App.vue is the component that we will have in our website.
+
+	main.js
+
+		import Vue from 'vue'
+		import App from './App.vue'
+
+		Vue.config.productionTip = false;
+
+
+		new Vue({
+		el:'#app',
+		render: h => h(App),
+		})
+
+		this is the normal file of vue js .so there is many things to describe
+
+		1. import statement which is a ES6 feature . that import the component from other folder. 
+
+	App.vue
+
+		.vue is the representer of vue component.
+
+		<template></template> for wrapper element for representing component inside. there will be a main wrapper <div id='app'> which is the main div for holding all the element of the component
+
+			<template>
+
+				<div id="appp">
+
+					here goes all the element
+
+				</div>
+
+
+
+			</template>
+
+		** export default
+
+		we will have all the scripting for the component in 		
+		export default{
+
+			data(){
+				return {
+					title:'hello wolr'
+				},
+
+			methods:{
+
+			}
+			}
+
+		}
+
+
+
+Lesson - 19 - nesting and importing components
+
+	nesting is use for using component with in a component.
+
+	**creating a component
+
+		my prefer is for creating a child component first create a folder and then create the component.
+
+		create .vue file
+
+			<template>
+			    
+			    <ul>
+			        <li></li>
+			    </ul>
+			    
+			</template>
+
+			<script>
+			    
+			    export  default {
+			        
+			        data(){
+			            
+			            return {
+			                title:'Ninja app',
+			            }
+			        }
+			        
+			    }
+			    
+			</script>
+
+			<style>
+			    
+			</style>
+
+
+		Basic structure of a vue file
+
+		local and global use of component
+
+		Local:
+
+			for using a component locally we have to import it to that file say app.vue file.and then we can use it
+
+			<script>
+
+				import Ninjas from './component/ninja.vue',
+
+				export default {
+
+					components:{
+
+						'ninjas':Ninjas
+
+					}
+
+				}
+
+			</script>
+
+
+		global:
+
+			for declear a component globally ,it had to be defined with in the main.js folder
+
+				import Ninjas from './component/ninjas.vue'
+
+				Vue.component('ninja',Ninjas);
+
+
+				then we can access this component from anywhere in the app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 43cc1a4d809b42eb606cbde464e1ce5d1abf35ec
 
 			
 
