@@ -595,6 +595,23 @@ Lesson - 19 - nesting and importing components
 
 
 
+Lesson - 20 - Component css
+
+	a component need only just one root element
+
+	when we style on root or nested component the style work with both of them .So how do we do it in component specific 
+
+	example:with scoped
+
+
+	<style scoped>
+
+	</style>
+
+
+
+
+
 
 
 
