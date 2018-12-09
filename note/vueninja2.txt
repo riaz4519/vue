@@ -359,42 +359,24 @@ Lesson - 12 - looping with v-for
 		</div>
 		</template>
 
-Lesson - 14 - Multiple Vue Instance
+**Multiple Vue Instance
 	
 	var one = new Vue({
 
 		el:"#app1",
-		data:{
-		title:"hello world",
-		},methods:{
-
-		},
-		computed:{
-		
-		}
-
 
 	})
 
 	var two = new Vue({
 
 		el:"#app2",
-		data:{
-		title:"hello world",
-		},
-		methods:{
-
-		},
-		computed:{
-
-		}
-
-
 
 	})
 
 	now by these two vue instance variable we can change or add data to one another instance or from outside of the instance
 
+<<<<<<< HEAD
+=======
 Lesson - 15 - component - 
 
 	is re-useable object 
@@ -581,6 +563,25 @@ Lesson - 19 - nesting and importing components
 
 		Local:
 
+			for using a component locally we have to import it to that file say app.vue file.and then we can use it
+
+			<script>
+
+				import Ninjas from './component/ninja.vue',
+
+				export default {
+
+					components:{
+
+						'ninjas':Ninjas
+
+					}
+
+				}
+
+			</script>
+
+
 		global:
 
 			for declear a component globally ,it had to be defined with in the main.js folder
@@ -594,6 +595,42 @@ Lesson - 19 - nesting and importing components
 
 
 
+Lesson - 20 - Component css
+
+	a component need only just one root element
+
+	when we style on root or nested component the style work with both of them .So how do we do it in component specific 
+
+	example:with scoped
+
+
+	<style scoped>
+
+	</style>
+
+
+Lesson - 21 - Component example
+
+	./ == means current directory in vue js
+
+	** every component must have a root element after the <template></template>
+
+	Learned many things but in practical 
+		1.made a template with header,footer and with the main body
+		2.imported multiple component and included in App.Vue
+
+		import Header from './components/Header.vue'
+		import Footer from './components/Footer.vue'
+
+		components:{
+
+			'app-header' : Header,
+			'app-footer' : Footer
+
+
+		}
+		3.added scoped css
+		4.worked with array which is multidimentional
 
 
 
@@ -605,6 +642,12 @@ Lesson - 19 - nesting and importing components
 
 
 
+
+
+
+
+
+>>>>>>> 43cc1a4d809b42eb606cbde464e1ce5d1abf35ec
 
 			
 
