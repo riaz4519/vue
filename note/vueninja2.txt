@@ -633,6 +633,37 @@ Lesson - 21 - Component example
 		4.worked with array which is multidimentional
 
 
+Lesson - 22 - Props
+
+	send data to the child component from the parent component 
+
+
+	** two steps passing and reciving
+
+	----passing from parent component
+
+	<app-main v-bind:ninjas="ninjas"></app-main>
+
+	----reciving in child component
+
+	export default{
+
+		props:['nameof the attribute']
+
+	}
+
+	** prop Validation
+
+		props:{
+
+			ninjas:{
+
+				type:Stringn/Array
+			}
+
+		}
+
+
 
 
 
