@@ -663,6 +663,12 @@ Lesson - 22 - Props
 
 		}
 
+Lesson - 23 - Primitive vs Reference type 
+
+	Primitive : string,boolean and number 
+
+	Reference type : Object,Array
+
 
 
 
