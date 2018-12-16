@@ -658,7 +658,8 @@ Lesson - 22 - Props
 
 			ninjas:{
 
-				type:Stringn/Array
+				type:Stringn/Array,
+				required:true
 			}
 
 		}
