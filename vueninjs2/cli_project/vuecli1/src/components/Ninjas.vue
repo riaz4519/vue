@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-on="http://www.w3.org/1999/xhtml">
 
     <div id="ninjas">
 
@@ -10,6 +10,7 @@
             </li>
 
         </ul>
+        <button v-on:click="deleteNinja">Delete Ninja</button>
 
     </div>
 
@@ -36,6 +37,13 @@
 
             }
 
+        },
+        methods:{
+            deleteNinja:function () {
+
+                this.ninjas.pop();
+
+            }
         }
 
     }
