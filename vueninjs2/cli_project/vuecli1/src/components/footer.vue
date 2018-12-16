@@ -2,7 +2,7 @@
 
     <footer>
 
-        <p>{{ copyright}}</p>
+        <p>{{ copyright}} {{ title}}</p>
 
     </footer>
 
@@ -11,15 +11,32 @@
 
 <script>
 
+    import { bus } from '../main'
+
     export default{
+
+        props:{
+
+
+            title:{
+                type:String,
+            }
+
+        },
 
         data(){
 
             return {
 
-                copyright:'Copyright 2018 vue fahim'
+                copyright:'Copyright 2018 '
 
             }
+        },
+        created(){
+
+            bus.$on('titleChanged',(data) => {
+                this.title = data;
+            })
         }
 
     }

@@ -2,11 +2,11 @@
   <div >
 
 
-    <app-header></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
 
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
 
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
 
 
   </div>
@@ -39,7 +39,17 @@ export default {
                 {name: 'Kami', speciality: 'Webpack', show: false},
                 {name: 'Yoshi', speciality: 'Data Diggin', show: false}
             ],
+            title:"vue ninja",
 
+        }
+        
+    },
+    
+    methods:{
+        updateTitle:function (updatedTitle) {
+
+          this.title = updatedTitle
+            
         }
     }
 

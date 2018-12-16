@@ -43,7 +43,8 @@
 
                 this.ninjas.pop();
 
-            }
+            },
+
         }
 
     }

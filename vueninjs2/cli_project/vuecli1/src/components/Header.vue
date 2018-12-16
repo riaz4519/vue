@@ -1,8 +1,8 @@
-<template>
+<template xmlns:v-on="http://www.w3.org/1999/xhtml">
 
     <header>
 
-        <h1>{{ title}}</h1>
+        <h1 v-on:click="changeTitle">{{ title}}</h1>
 
     </header>
 
@@ -10,17 +10,45 @@
 
 <script>
 
+    import { bus } from '../main'
+
     export default {
+
+        props:{
+
+            title:{
+                type:String,
+            }
+
+        },
 
         data(){
 
             return {
 
-                title:'Vue ninja'
+
+
+
+
+            }
+
+
+        },
+
+        methods:{
+
+            changeTitle:function () {
+
+                //this.$emit('changeTitle','vue Wizard');
+                this.title = 'Vue Wizards';
+                bus.$emit('titleChanged','vue Wizards');
+
+
 
             }
 
         }
+
 
     }
 

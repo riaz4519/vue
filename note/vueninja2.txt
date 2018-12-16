@@ -670,8 +670,98 @@ Lesson - 23 - Primitive vs Reference type
 
 	Reference type : Object,Array
 
+	***Reference type:
+
+		if we use reference type if we edit it in one place it will be edited in the other places to 
+
+	**primitive types:
+
+	it will just change in the component
 
 
+
+Lesson - 24 Events(child to parent) $emit
+
+	This behavior allows to change premitive type variable on root component .
+
+	**
+
+	<p v-on:click="changeTitle">{{ title }}</p>
+
+
+	methods:{
+
+
+	changeTitle:function(){
+
+
+		this.$emit('changeTitle','vue Wizard');
+
+	}
+
+	}
+
+	// root component
+
+	<app-header  v-on:changeTitle="UpdateTitle($event)"></app-header>
+
+
+
+
+	methods:{
+
+	updateTitle:function(updated_title){
+
+		this.title = updatedtitle;
+	}
+
+	}
+
+
+Lessson - 25 - The Event Bus
+
+	Event bus help to change value in diffrent components at the same time without using the root component
+
+	**creating bus Vue object on main.js
+
+		export const bus = new Vue()
+
+	**import from the component where you want to use.
+
+		import { bus } from '../main'
+
+	**the triggering function
+
+		<p v-on:click="titleChanged"></p>
+
+
+
+		methods:{
+
+
+			titleChanged:function(){
+
+
+				this.title = 'Vue Wizard';
+
+				bus.$emit('titleChanged','Vue Wizard')
+
+			}
+
+
+		}
+
+	**reciving / other component that will be change
+
+		created(){
+
+			bus.$on('titleChanged',(data) => {
+
+				this.title = data;
+
+			})
+
+		}
 
 
 
