@@ -45,6 +45,33 @@
 
             },
 
+
+        },
+
+        //life cycle hooks
+
+        beforeCreate(){
+            alert('before create');
+
+        },
+        created(){
+            alert('created');
+        },
+        beforeMount(){
+
+            alert('before mounted');
+
+        },
+        mounted(){
+
+            alert('mounted');
+        },
+        beforeUpdate(){
+            alert('before update');
+        },
+        updated(){
+
+            alert('updated');
         }
 
     }
