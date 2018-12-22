@@ -895,6 +895,8 @@ Lesson - 27 - slots
 
 
 
+Lesson - 28 -Dynamic Component
+
 
 
 
