@@ -766,7 +766,132 @@ Lessson - 25 - The Event Bus
 
 Lesson - 26 - Life cycle hooks
 
-	
+	        beforeCreate(){
+            alert('before create');
+
+        },
+        created(){
+            alert('created');
+        },
+        beforeMount(){
+
+            alert('before mounted');
+
+        },
+        mounted(){
+
+            alert('mounted');
+        },
+        beforeUpdate(){
+            alert('before update');
+        },
+        updated(){
+
+            alert('updated');
+        }
+
+
+Lesson - 27 - slots
+
+	slots is the way of sending data to a component .its simillar like prop
+
+		<form-helper>
+
+			<h2>i am the h 2 </h2>
+			<p>I am the paragraph</p>
+		</form-helper>
+
+		* viewing this on browser
+
+			<template>
+
+
+
+				<div>
+
+					<h1> this is the form-helper component
+
+					<slot></slot>
+				</div>
+
+			</template>
+
+			it will apear as many time as we want just have to place <slot></slot>
+
+			** specific placement of slots -naming slots
+
+
+		<form-helper>
+
+			<h2 slot='title'>i am the h 2 </h2>
+			<p slot='text'>I am the paragraph</p>
+
+		</form-helper>
+
+			--output
+
+				<template>
+
+				<div>
+					<slot name='title'></slot>
+					<slot name='text'></sloat>
+
+				</div>
+
+				</template>
+
+		* we can make editable template with slot
+
+			<template>
+
+		    <div>
+		        <h1>Please fill out our form...</h1>
+		        <form>
+		            <div id="form-header">
+		                <slot name="form-header"></slot>
+		            </div>
+		            <div id="form-fields">
+		                <slot name="form-fields"></slot>
+		            </div>
+		            <div id="form-controls">
+		                <slot name="form-controls"></slot>
+		            </div>
+		            <div id="useful-links">
+		                <ul>
+		                    <li><a href="#">link 1</a></li>
+		                    <li><a href="#">link 2</a></li>
+		                    <li><a href="#">link 3</a></li>
+		                    <li><a href="#">link 4</a></li>
+		                </ul>
+		            </div>
+		        </form>
+		    </div>
+
+		</template>
+
+		** giving data 
+
+			<form-helper>
+
+
+			<div slot="form-header">
+
+			<h3>This is the title of the form</h3>
+			<p>Information about the form</p>
+
+			</div>
+			<div slot="form-fields">
+			<input type="text" placeholder="name" required>
+			<input type="password" placeholder="password" required>
+
+			</div>
+			<div slot="form-controls">
+
+			<button @click="handleSubmit">Submit</button>
+
+			</div>
+
+			</form-helper>
 
 
 
