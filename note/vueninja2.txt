@@ -897,6 +897,10 @@ Lesson - 27 - slots
 
 Lesson - 28 -Dynamic Component
 
+	Dynamic components are used for traversing between component on click or on action as our will. we can do all that by Dynamic component
+
+	
+
 
 
 

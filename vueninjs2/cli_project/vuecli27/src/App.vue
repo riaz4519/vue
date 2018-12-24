@@ -1,37 +1,22 @@
 <template>
   <div id="app">
 
-    <form-helper>
 
-
-      <div slot="form-header">
-
-        <h3>This is the title of the form</h3>
-        <p>Information about the form</p>
-
-      </div>
-      <div slot="form-fields">
-        <input type="text" placeholder="name" required>
-        <input type="password" placeholder="password" required>
-
-      </div>
-      <div slot="form-controls">
-
-        <button @click="handleSubmit">Submit</button>
-
-      </div>
-
-    </form-helper>
+    <form-one></form-one>
+    <form-two></form-two>
 
   </div>
 </template>
 
 <script>
 
-  import formHelper from './components/formHelper.vue'
+ import formOne from './components/formOne.vue'
+ import formTwo from './components/formTwo.vue'
 
 
 export default {
+
+
 
   data(){
 
@@ -42,7 +27,11 @@ export default {
   },
   name: 'app',
   components: {
-    'form-helper':formHelper,
+
+      'form-one':formOne,
+      'form-two':formTwo
+
+
   }
 }
 </script>
