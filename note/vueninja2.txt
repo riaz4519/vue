@@ -933,6 +933,11 @@ Lesson - 28 -Dynamic Component
 	</keep-alive>
 
 
+Lessong - 29 -  Input Binding (Creating a blog, part 1)
+
+		v-model
+
+
 
 
 	
