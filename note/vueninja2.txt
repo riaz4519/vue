@@ -937,6 +937,11 @@ Lessong - 29 -  Input Binding (Creating a blog, part 1)
 
 		v-model
 
+		lazy - it will work after all the data inserted and click tab .
+		its an input modifier
+
+		<input  type="text" v-model.lazy="">
+
 
 
 
