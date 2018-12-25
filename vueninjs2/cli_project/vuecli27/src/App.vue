@@ -2,8 +2,18 @@
   <div id="app">
 
 
-    <form-one></form-one>
-    <form-two></form-two>
+    <keep-alive>
+
+
+      <component v-bind:is="component"></component>
+
+    </keep-alive>
+
+
+
+    <button v-on:click="component = 'form-one'">show form one</button>
+    <button v-on:click="component = 'form-two'">show form Two</button>
+
 
   </div>
 </template>
@@ -21,7 +31,8 @@ export default {
   data(){
 
       return{
-          title:"This is the title"
+          title:"This is the title",
+          component:'form-two'
       }
 
   },

@@ -899,6 +899,42 @@ Lesson - 28 -Dynamic Component
 
 	Dynamic components are used for traversing between component on click or on action as our will. we can do all that by Dynamic component
 
+
+	**component keyword
+
+		<component is="form-one"></component>
+
+		sending component as data 
+
+		data(){
+
+
+		return {
+
+			component:'form-one'
+
+		}
+		}
+
+		<component v-bind:is='component'></component>
+
+	**change component dynamicly with button click
+
+	<button v-on:click="component ='form-one'">Show form one</button>
+	<button v-on:click="component ='form-two'">Show form two</button>
+
+	**keep-alive tag
+
+	when we traverse from one component to another dynamically it does not contain the data it had . so for preserve those data to that component
+
+	<keep-alive>
+
+			<component v-bind:is='component'></component>
+	</keep-alive>
+
+
+
+
 	
 
 
