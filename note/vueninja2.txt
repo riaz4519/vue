@@ -942,6 +942,35 @@ Lessong - 29 -  Input Binding (Creating a blog, part 1)
 
 		<input  type="text" v-model.lazy="">
 
+Lesson - 30 - Checkbox Binding with v-model
+
+	checkbox in vue js is done with model binding
+
+	all the checkbox will have the same category model
+
+	<input type="checkbox" value="whatever" v-model="category">
+
+
+	data(){
+
+	return {
+
+
+		blog:{
+
+		categories:[]
+		}
+
+	}
+	}
+
+	showing the categories after selected:
+
+	<ul>
+
+		<li v-for="category in categories">{{ category}} </li>
+	</ul>
+
 
 
 
