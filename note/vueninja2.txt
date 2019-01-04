@@ -972,6 +972,17 @@ Lesson - 30 - Checkbox Binding with v-model
 	</ul>
 
 
+Lesson - 31 - select box
+
+
+	<select v-model="author">
+		<option>Fahim </option>
+		<option>Naime </option>
+		<option>Mukim</option>
+	</select>
+
+
+
 
 
 	
