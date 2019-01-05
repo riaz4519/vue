@@ -27,6 +27,7 @@
 
 
             </select>
+            <button v-on:click="post">POST</button>
         </form>
         <div id="preview">
             <h3>Preview blog</h3>
@@ -62,6 +63,21 @@
             }
         },
         methods: {
+
+            post:function () {
+                this.$http.post('https://jsonplaceholder.typicode.com/posts',{
+
+                    body:{
+                        
+                        title:this.blog.title,
+                        body:this.blog.content,
+                        userId:1,
+                    }
+
+                }).then(function (data) {
+                    console.log(data);
+                })
+            }
         }
     }
 </script>

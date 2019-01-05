@@ -983,6 +983,42 @@ Lesson - 31 - select box
 
 
 
+Lesson - 32 - http request
+
+	we need  plugin - Vue-resource
+
+	**instal 
+	npm-install vue-resource --save
+
+	that  will save  the plugin to our dependencies
+
+	**use dependies main.js
+
+		First import
+			import VueResource from 'vue-resource'
+
+			Vue.use(VueResource)
+
+	**now implement
+		on button click
+			<button v-on:click="post">click</button>
+
+			methods:{
+
+				post:function(){
+
+					this.$http.post()
+				}
+
+			}
+
+			JSON PLACEHOLDER -rest api
+
+
+
+
+
+
 
 
 	
