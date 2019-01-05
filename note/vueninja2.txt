@@ -1007,12 +1007,29 @@ Lesson - 32 - http request
 
 				post:function(){
 
-					this.$http.post()
+
+				this.$http.post('https://jsonplaceholder.typicode.com/posts',{
+
+				title:this.blog.title,
+				body:this.blog.content,
+				userId:1,
+				id:222,
+                }).then(function (data) {
+
+                    console.log(data);
+                    this.submitted = true;
+                });
 				}
 
 			}
 
 			JSON PLACEHOLDER -rest api
+
+
+			sending request post and getting response
+
+
+Lesson - 33 -GET Request
 
 
 
