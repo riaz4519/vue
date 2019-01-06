@@ -68,7 +68,7 @@
                 this.$http.post('https://jsonplaceholder.typicode.com/posts',{
 
                     body:{
-                        
+
                         title:this.blog.title,
                         body:this.blog.content,
                         userId:1,
