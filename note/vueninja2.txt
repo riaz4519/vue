@@ -1139,6 +1139,28 @@ Lesson - 35 - Filter
 
 Lesson - 36 -Custom search filter
 
+	we are gonna work with filter here
+
+	**filter work like each function in javascript
+
+	computed:{
+
+		filterBlog:function(){
+
+			return this.blogs.filter((blog) => {
+
+				return blog.title.match(this.search)
+			});
+		}
+	}
+
+
+	**answer
+		<div v-for="blog in filteredBlog" class="single-blog">
+            <h2 v-rainbow>{{ blog.title | to-uppercase}}</h2>
+            <article>{{ blog.body | snippet }}</article>
+        </div>
+
 
 
 
