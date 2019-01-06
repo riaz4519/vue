@@ -1045,6 +1045,70 @@ Lesson - 33 -GET Request
 
 			slice(0,10) - use for getting how many data we want
 
+Lesson - 34 - custom Directives 
+
+	we use directives like v-for,v-show and many things .it does have their own behavior.In Vue js we can make our own directives and work with them.
+
+	* structure of a dirctives 
+
+		v-name:argument="'value'"
+
+
+		we gonna manke it globally in main.js
+
+		Vue.directive('name',{
+
+			bind(el,binding,vnode){
+
+				//all the action goes here
+
+			}
+
+		});
+
+		**here 
+
+			el = represent the element where this directive is being used
+
+			binding = for the argument and the value passed through the directive 
+
+			vnode = is for virtual node 
+
+		**example
+
+
+
+		**calling 
+		///
+
+		v-theme:column="'narrow'"
+
+		///
+
+		Vue.directive('theme',{
+
+		bind(el,binding,vnode){
+
+		if (binding.value == "wide"){
+
+		  el.style.maxWidth = "1200px";
+
+		}
+		else if (binding.value == "narrow"){
+
+		  el.style.maxWidth = "550px;"
+		}
+
+		if (binding.arg == 'column'){
+
+		  el.style.background = '#ddd';
+		  el.style.padding = '20px';
+		}
+
+		}
+		});
+
+
 
 
 
