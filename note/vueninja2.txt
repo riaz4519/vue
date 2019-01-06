@@ -1109,6 +1109,36 @@ Lesson - 34 - custom Directives
 		});
 
 
+Lesson - 35 - Filter
+
+	Change the output of data to the browser . Filter is use for change the output of the data not the actual data.
+
+	**structure
+
+		Vue.filter('name',function(value){
+
+			return 'the modified data';
+		});
+
+	**calling a filter
+
+		<p>{{ blog.body | nameOfthefilter }}</p>
+
+	**Example
+
+		**calling
+
+		<article>{{ blog.body | snippet }}</article>
+
+		**filter
+
+		Vue.filter('snippet',function (value) {
+
+		return value.slice(0,100) + '....';
+		});
+
+Lesson - 36 -Custom search filter
+
 
 
 
