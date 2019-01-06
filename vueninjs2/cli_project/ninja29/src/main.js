@@ -9,7 +9,7 @@ Vue.use(VueResource);
 
 //custom directives
 
-Vue.directive('rainbow',{
+/*Vue.directive('rainbow',{
 
   bind(el,binding,vnode){
 
@@ -17,7 +17,7 @@ Vue.directive('rainbow',{
 
   }
 
-});
+});*/
 
 Vue.directive('theme',{
 
@@ -44,11 +44,11 @@ Vue.directive('theme',{
 
 //filters
 
-Vue.filter('to-uppercase',function (value) {
+/*Vue.filter('to-uppercase',function (value) {
 
   return value.toUpperCase();
 
-});
+});*/
 
 Vue.filter('snippet',function (value) {
 

@@ -1163,9 +1163,52 @@ Lesson - 36 -Custom search filter
 
 
 
+Lesson - 37 - Registering Things Locally
+
+	** filters
+
+		two way:
+			1 .
+				filters:{
+
+					'to-uppercase':function(value){
+
+					 return value.style.color = color;
+
+					}
+				}
+			2.
+
+				filters:{
+
+					'toUppercase':function(value){
 
 
+						 return value.style.color = color;
+					}
+				}
+			3.
+				filters:{
 
+					toUppercase(value){
+
+						 return value.style.color = color;
+					}
+				}
+
+	** Directives
+
+		directives:{
+
+			'rainbow':{
+
+				bind(cl,binding,vnode){
+
+					el.style.color = "#"+Math.random().toString().slice(2,8);
+				}
+
+			}
+		}
 
 	
 
