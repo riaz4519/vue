@@ -1210,6 +1210,39 @@ Lesson - 37 - Registering Things Locally
 			}
 		}
 
+Lesson - 38 - Mixins 
+
+	mixins in a concept where we can use a code over and over again through out in our application.So basicaly its a reuseable code.
+
+	**first we make a javascript file 
+		export  default {
+
+
+		    computed:{
+		        filteredBlog:function () {
+
+		            return this.blogs.filter((blog) =>{
+
+		                return blog.title.match(this.search);
+		            });
+		        }
+		    }
+
+		}
+
+		**import 
+
+			import searchMixin from '../searchMixin'
+
+			mixins:[searchMixin]
+
+			then use it in the application
+
+			<div v-for="blog in filteredBlog" class="single-blog">
+			<h2 v-rainbow>{{ blog.title | to-uppercase}}</h2>
+			<article>{{ blog.body | snippet }}</article>
+			</div>
+
 	
 
 
