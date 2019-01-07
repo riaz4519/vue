@@ -1,11 +1,21 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueRouter from 'vue-router'
 
 Vue.config.productionTip = false
 
 import VueResource from 'vue-resource'
 
 Vue.use(VueResource);
+
+//vue router
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+
+
+
+});
 
 //custom directives
 
