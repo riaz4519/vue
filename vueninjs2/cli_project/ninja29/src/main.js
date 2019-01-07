@@ -6,12 +6,18 @@ Vue.config.productionTip = false
 
 import VueResource from 'vue-resource'
 
+/*import routes.js*/
+
+import Routes from './routes'
+
 Vue.use(VueResource);
 
 //vue router
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+
+  routes:Routes,
 
 
 
@@ -66,5 +72,8 @@ Vue.filter('snippet',function (value) {
 });
 
 new Vue({
+
   render: h => h(App),
+    router:router,
+
 }).$mount('#app')

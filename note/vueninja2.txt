@@ -1246,6 +1246,56 @@ Lesson - 38 - Mixins
 Lesson - 39 - Setting up routing
 
 	
+	we need vue-router for having diferent page in our web application.
+
+		**install 
+
+			npm install vue-router --save
+
+		**register it on main.js
+
+			import vueRouter from 'vue-router';
+
+		**creating routing path
+
+			1.create a js file ex:route.js
+
+			//object arrayt=
+
+
+			import nameofthecomponent from './component'
+
+				export default [
+
+					{path:'/',component:nameofthecomponent},
+					{path:'/add',component:nameofthecomponent},
+
+				]
+			2.main.js
+
+				**import the decleard routes
+
+				//routes.js
+
+					import Routes from './routes'
+
+			const router = new VueRouter({
+
+
+				routes:Routes
+
+			});
+
+
+			new Vue({
+
+			render: h => h(App),
+			
+			router:router,
+
+			}).$mount('#app')
+
+
 	
 
 
