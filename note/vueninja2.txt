@@ -1296,6 +1296,16 @@ Lesson - 39 - Setting up routing
 			}).$mount('#app')
 
 
+Lesson - 40 hash vs history
+
+	const router = new Vuerouter({
+
+
+		routes:Routes,
+		mode:'history'
+	});
+
+
 	
 
 
