@@ -1353,7 +1353,24 @@ Lesson - 42 - router paramenter
 
 	    **dymanically adding route
 
-	    <router-link ><h2></h2><router-link>
+	    <router-link v-bind:to="'/blog/'+id"><h2></h2><router-link>
+
+
+Lesson - 43 - posting to firebase
+
+		** have post to json place holder before but it wsa fake .now we are gonna make real posting .we are gonna use for our example database .
+
+
+		*posting
+
+			 methods: {
+            post:function () {
+                this.$http.post('https://vue-1-f73cf.firebaseio.com/posts.json',this.blog).then(function (data) {
+                    console.log(data);
+                    this.submitted = true;
+                });
+            }
+        }
 
 
 	
