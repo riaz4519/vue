@@ -1305,6 +1305,56 @@ Lesson - 40 hash vs history
 		mode:'history'
 	});
 
+Lesson - 41 - router-link
+
+	like anchore tag wer can use router link for routing 
+
+
+	<router-link to="/her">Blog </router-link>
+
+	* for which url is selected use 'exact'
+
+	<router-link to="/her" exact>Blog </router-link>
+
+
+Lesson - 42 - router paramenter
+
+
+		for paramter to work we have to modify the route class
+
+		{path:'/blog/:id',component:thecomponent}
+
+		** for showing that indibidual data we have to catch the parameter value.
+
+			as we are using vue-router its not a problem
+
+			 export default{
+
+	        data(){
+
+	            return{
+	            //cateching the route parameter
+	                id:this.$route.params.id,
+	                blog:{}
+	            }
+
+	        },
+	        created(){
+	            this.$http.get('http://jsonplaceholder.typicode.com/posts/'+this.id).then(function (data) {
+
+	                    console.log(data)
+	                this.blog = data.body;
+	            }
+	            );
+
+	        }
+
+	    }
+
+	    **dymanically adding route
+
+	    <router-link ><h2></h2><router-link>
+
 
 	
 
