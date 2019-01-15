@@ -1,3 +1,43 @@
 Lesson - 1 - What is Vuex
 
 	Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
+
+
+Lesson - 3 - setting up a central store
+
+	**install vuex
+		npm install vuex --save
+
+	**its a tradition for vuex that to open a directory  call store -> store.js file 
+
+	**import vuex and vue
+
+		import Vue from 'vue'
+		import Vuex from 'vuex'
+
+		Vue.use(Vuex);
+
+	*exporting 
+
+	export const store = new Vuex.Store({
+
+		state:{
+
+
+        products: [
+            {name: 'Banana Skin', price: 20},
+            {name: 'Shiny Star', price: 40},
+            {name: 'Green Shells', price: 60},
+            {name: 'Red Shells', price: 80}
+        ]
+
+		}
+
+	});
+
+
+Lesson - 4 - Using computer properties
+
+
+
+
