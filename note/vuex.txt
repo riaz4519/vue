@@ -36,8 +36,146 @@ Lesson - 3 - setting up a central store
 	});
 
 
-Lesson - 4 - Using computer properties
+Lesson - 4 - Using computed properties
+
+	state: is like data
+
+	here we will use computer properties to populate those list item
 
 
+	**first adding the state or importing it to the main.js
+
+	import { store } from './store/store'
+
+	 --use it in out vue instantace
+
+
+	 	new vue({
+	 	el:'#app'
+
+	 	render:h=> h(App),
+	 	store:store,
+
+
+	 	}).$mount('#app');
+
+	 *** we can grab the list item form store in two ways
+
+	 	1.computed properties in every component a and grab the data from state 
+
+	 		export default{
+
+	 				comouted:{
+
+	 					products:function(){
+
+	 						retunr this.$store.state.products;
+	 					}
+	 				}
+
+	 		}
+
+	 		and adding it to list 
+
+	 			<ul>
+
+	 			<li v-for="product in products"></li>
+
+
+
+	 			</ul>
+
+	 	2.Mixins
+
+	 		** first make a mixin
+
+
+	 		mixins.js
+
+	 		export default{
+
+	 			computed:{
+
+	 				products:function(){
+
+	 					return this.$store.state.products;
+	 				}
+
+	 			}
+
+	 		}
+
+
+	 		--using it on components
+
+	 		import listMixin from './mixins'
+
+	 		export default{
+
+	 			mixins:[listMixin],
+	 		}
+
+	 		use it 
+
+	 			<ul>
+
+	 			<li v-for="product in products"></li>
+
+	 			</ul>
+
+
+Lesson - 5 - getters 
+
+	getter is like mixins to using one functionality to many component
+
+	getter does not change the data itself but it change the outcoe or modify the data to show 
+
+
+	export default { 
+
+
+		state:{
+
+
+		        products: [
+            {name: 'Banana Skin', price: 20},
+            {name: 'Shiny Star', price: 40},
+            {name: 'Green Shells', price: 60},
+            {name: 'Red Shells', price: 80}
+        ]
+
+
+		},
+
+		getters:{
+
+			salseProducts:state => {
+
+				var saleProducts = state.products.map({
+
+					return {
+
+						name:'**'+product.name +'**',
+						price:product.price / 2,
+					}
+
+				});
+
+			}
+		}
+	}
+
+	**using it by makin computer properties
+
+		computer:{
+
+			saleProducts:{
+
+				return this.$store.getters.saleProducts
+			}
+		}
+
+
+Lesson - 6 - Mutations
 
 

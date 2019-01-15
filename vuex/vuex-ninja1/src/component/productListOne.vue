@@ -4,11 +4,12 @@
         <h1>Product list two</h1>
 
         <ul>
-            <li v-for="product in products">
+            <li v-for="product in saleProducts">
                 <span class="name">{{ product.name}}</span>
                 <span class="price">{{ product.price}}</span>
             </li>
         </ul>
+        <button v-on:click="reducePrice">Reduce Price</button>
 
     </div>
 </template>
@@ -16,15 +17,33 @@
 <script>
     export default {
 
-        data () {
-            return {
+     computed:{
+         products:function () {
+
+             return this.$store.state.products;
+
+         },
+         saleProducts:function () {
 
 
+             return this.$store.getters.saleProducts;
 
+         }
 
+     },
+        methods:{
+
+            reducePrice:function () {
+
+                this.$store.state.products.forEach(product =>{
+
+                    product.price = product.price - 1;
+
+                });
             }
-        },
-        props:['products']
+
+        }
+
     }
 </script>
 
