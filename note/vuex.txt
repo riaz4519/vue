@@ -225,4 +225,91 @@ Lesson - 6 - Mutations
 
 
 
+Lesson - 7 - actions 
+
+	action are like middle ware in laravel . it work between mutation call and mutation perfom.we use it because some time we need to upate the data base or get data in between mutation work so we need action on the middle of that .
+
+
+		**first step
+
+			to make and action
+
+				actions:{
+
+
+					reducePrice:context =>{
+
+
+						//to the mutation
+
+						setTimeOut({
+						context.commit('reudcePrice');
+						},2000)
+						
+
+
+					}
+				}
+
+		**calling it from the component
+
+			we do commit when we are calling a mutation but we will be calling a dispatch function when calling a actions
+
+				//name of the action
+				this.$store.dispatch('reducePrice')
+
+
+		**with parameter
+
+			--calling the method
+
+				<button v-on:click="reducePrice(4)"> Reduce Price </button>
+
+			-- method
+
+			methods:{
+
+				reducePrice:function(amount){
+					//name of the action and the parameter
+					this.$store.dispatch('reducePrice',amount)
+				}
+			}
+
+		--receving at the action
+
+			actions:{
+
+			//context represent the whole component itself and payload is the function parameter
+				reducePrice:(context,payload)=>{
+
+				setTimeOut({
+
+				context.commit('reduceprice',payload)
+
+				},2000)
+
+				);
+
+				}
+			}
+
+		--from the mutation
+
+			mutations:{
+
+				reducePrice:(state,payload )=>{
+
+				state.products.forEach(product =>{
+
+				product.price = product.price - payload;
+
+				});
+				}
+
+
+			}
+
+
+
+
 
