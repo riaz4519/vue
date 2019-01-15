@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
 
-
+    strict:true,
     state:{
         products: [
             {name: 'Banana Skin', price: 20},
@@ -29,6 +29,18 @@ export const store = new Vuex.Store({
                     price: product.price / 2,
 
                 }
+            });
+        }
+
+    },
+    mutations:{
+
+        reducePrice:state =>{
+
+            state.products.forEach(product =>{
+
+                product.price = product.price - 1;
+
             });
         }
 

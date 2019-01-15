@@ -21,8 +21,10 @@
         methods: {
         },
         created() {
-            this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
-                this.blogs = data.body.slice(0,10);
+            this.$http.get('https://vue-1-f73cf.firebaseio.com/posts.json').then(function(data){
+
+                console.log(data);
+                //this.blogs = data.body.slice(0,10);
 
             });
         },

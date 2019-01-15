@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div id="product-list-one">
 
         <h1>Product list two</h1>
@@ -35,11 +35,13 @@
 
             reducePrice:function () {
 
-                this.$store.state.products.forEach(product =>{
+          /*      this.$store.state.products.forEach(product =>{
 
                     product.price = product.price - 1;
 
-                });
+                });*/
+
+            this.$store.commit('reducePrice');
             }
 
         }

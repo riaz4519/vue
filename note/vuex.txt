@@ -178,4 +178,51 @@ Lesson - 5 - getters
 
 Lesson - 6 - Mutations
 
+	mutation is like methods but its use in vuex for changing the state property directly. unlike getter which job is to change the outcome of the state prperty not the actual state
+
+		**first step 
+			go to store and after getters make an property called mutations:
+
+
+			mutations:{
+
+				reducePrice: state =>{
+
+				state.products.forEach(product =>{
+
+
+
+					product.price -= 1;
+
+				});
+
+
+				}
+			}
+
+
+		** now using it from the component
+
+
+			when the methods is called
+
+				reducePriceMethod:function(){
+
+
+					//commiting the mutations
+					this.$store.commit('reducePrice')
+
+				}
+
+		**strict mode 
+			we can change state by calling normal methods too .by calling the strict object to true
+
+			export const store = new Vuex({
+
+
+				strict:true
+			});
+
+
+
 
