@@ -310,6 +310,36 @@ Lesson - 7 - actions
 			}
 
 
+Lesson - mapping actions and getters
+
+
+
+	** npm install babel-preset-stage-2 dev-save
+	register on babelrc 
+		stage-2
+
+		    import { mapActions} from 'vuex'
+    		import { mapGetters} from 'vuex'
+
+    		on computed properties
+
+         ...mapGetters([
+
+             'saleProducts'
+         ])
+
+
+         --on methods
+         
+         ...mapActions([
+            'reducePrice'
+         ])
+
+
+
+
+
+
 
 
 
