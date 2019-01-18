@@ -1286,6 +1286,10 @@ Lesson - 39 - Setting up routing
 
 			});
 
+			3. and ad <router-view> to app.vue
+
+			<router-view></router-view>
+
 
 			new Vue({
 
