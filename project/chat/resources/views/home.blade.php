@@ -9,6 +9,7 @@
 
                 <div class="card-body" id="app">
 
+                    <example-component></example-component>
 
 
                 </div>
