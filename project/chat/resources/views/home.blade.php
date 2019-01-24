@@ -3,13 +3,13 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">We Code Messenger</div>
 
                 <div class="card-body" id="app">
 
-                    <example-component></example-component>
+                    <chat-app :user="{{ auth()->user() }}"></chat-app>
 
 
                 </div>

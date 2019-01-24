@@ -8,5 +8,5 @@ class Message extends Model
 {
     //
 
-    protected $fillable = [];
+    protected $guarded = [];
 }
