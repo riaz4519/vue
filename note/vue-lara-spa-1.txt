@@ -1,0 +1,10 @@
+1.Intro :
+	in this project we will a create a single crud application using laravel and vue js
+	
+	which will include jwt,vuex,vue-router,validate.js
+
+2.Install :
+	-first install laravel 
+		composer create-project laravel/laravel lara-vue-spa-1
+	-install npm with the dependency
+		npm install --save vuex vue-router validate.js

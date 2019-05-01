@@ -1,0 +1,23 @@
+
+1.introduction 
+		we gonna learn vue js frame work vuetify
+
+
+2.Vuetify Tutorial #2 - Setting Up Vuetify 
+	
+	-install vuetify plugin
+		--vue add vuetify
+
+		-we have vuetify installed in plugin folder and its has already changed our vue.
+
+		-plugin/vuetify.js 
+			iconfont:'md'
+
+			means material design
+		** must run npm run serve after install vuetify plugin
+
+3.Vuetify Tutorial #3 - Vuetify Basics
+
+	<v-app ></v-app> -- root component
+
+
