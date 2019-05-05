@@ -5,6 +5,12 @@
 
 2.Vuetify Tutorial #2 - Setting Up Vuetify 
 	
+	-install vue 
+		-npm install @vue/cli -g
+		-vue create app-name
+		
+		
+
 	-install vuetify plugin
 		--vue add vuetify
 
@@ -19,5 +25,100 @@
 3.Vuetify Tutorial #3 - Vuetify Basics
 
 	<v-app ></v-app> -- root component
+
+	**** everyting that we see will on 
+		<v-content>
+			<router-view></router-view>
+		</content>
+
+	** view style or framwork work with props besides using class .Like we do that on bootstrap 
+
+		<v-toolbar app dark></v-toolbar>
+
+		*here v-toolbar is the main desing for toolbar and the styles are 
+			-app 
+				which makes it fixed at the top
+			-dark 
+
+				makes it dark
+
+			-height='132'
+
+4.Vuetify Tutorial #4 - Text & Colors
+
+	we can user diffrent class props to style our text .
+
+	-background-color  
+
+	     <p class="red">Red</p>
+
+	     it will make the background color red
+
+	-text color 
+
+		<p class="red--text">Text red</p>
+
+	-backgroud lighten 
+
+		<p class="red lighten-4">Red</p>
+
+	-text darken
+
+		<p class="red--text text--darken-4">Text red</p>
+
+
+	<h1 class="display-4">Massive display</h1>
+    <h4 class="display-1">smlall display</h4>
+
+    <p class="headline">This is a headline</p>
+    <p class="subheading">This is a sub-headline</p>
+    <p class="caption">This is a captains</p>
+
+
+    **go check fonts and color and text on the vuetify for many things 
+
+    5.Vuetify Tutorial #5 - Button & Icons
+
+    	we gonna talk about buttons
+
+
+    	-normal button 
+
+    		start with 
+    			<v-btn>click me</v-btn>
+
+    	-button with class
+
+    		<v-btn class="pink white--text">Click me </v-btn>
+
+    	-button with prop
+    		<v-btn  depressed   color="pink">click me</v-btn>
+
+    		-here color is a prop and depressed is also a prop
+
+    			-depressed is use for making the background drop shadow
+
+    	-button with flat prop
+
+    		<v-btn flat color="pink">Click</v-btn>
+
+    		-flat is use for making hte background transparents
+
+    	-button with icon
+
+    		- with in button use v-icon
+
+    			<v-btn>
+
+    				<span>Button</span>
+
+    				<v-icon>email</v-icon>
+    			</v-btn
+
+    		-left and right icon also
+
+
+
+
 
 
