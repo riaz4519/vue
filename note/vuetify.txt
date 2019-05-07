@@ -156,6 +156,55 @@
 
 7.Vuetify Tutorial #7 - Toolbars
 
+	toolbar is the main navigation for website
+
+	it start with <v-toolbar>
+
+	-toolbar
+
+		<v-toolbar></v-toolbar>
+
+		-flat 
+
+			<v-toolbar flat></v-toolbar>
+
+			it will make the drop shadow go away and also make the background transparent
+
+		-app
+
+			<v-toolbar app></v-toolbar>
+
+			make the navigation fixed at the top
+
+	-(v-toolbar-title)
+
+		<v-toolbar-title></v-toolbar-title>
+
+		toolbar title
+
+		-upercase
+
+			<v-toolbar-title class="text-upercase">
+
+			</v-toolbar-title>
+
+		-font-weight-light
+
+	-button
+
+		<v-btn></v-btn>
+		-right
+
+	-spacer
+
+		navigation left right
+
+		<v-spacer></v-spacer>
+
+
+	***lot of option in toolbar go look for it
+
+
 	
 
 
