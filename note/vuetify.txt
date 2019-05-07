@@ -205,8 +205,83 @@
 	***lot of option in toolbar go look for it
 
 
-	
 
+8.Vuetify Tutorial #8 - Navigation Drawers
+
+
+	its a side navigationvar to navigate the application
+
+	- v-navigation-drawer
+
+		<v-navigation-drawer app></v-navigation drawer>
+
+		-here app is necessary 
+
+	-now for showing the the navigation drawer 
+
+		<v-navigation-drawer app v-model="drawer"></v-navigation-drawer>
+
+
+		-now on the script
+
+			data(){
+
+				return{
+
+					drawer:false
+				}
+			}
+
+		-now we will use a button to control the drawe
+
+			<v-toolbar-side-icon @click="drawer=!drawer"></v-toolbar-side-icon>
+
+
+9.Vuetify Tutorial #9 - Themes
+
+	themes are the default color class that we use like warningn,success etc 
+
+	we can make ourself a default color like that or we can overwrite that 
+
+	-when we have install vuetify we have got a folder caller plugin ->vuetify.
+
+	go to that and 
+
+	theme:{
+
+		primary:'color that want to overwrite',
+	}
+	
+10.Vuetify Tutorial #10 - Lists
+
+
+	-list 
+
+		<v-list>
+
+		--its the wrapper
+
+			<v-list-tile v-for="(link,index) in links" :key="index" router :to="link.route">
+
+				<v-list-tile-action>
+
+					<v-icon>{{link.icon }}</v-icon>
+
+				</v-list-tile-action>
+
+				<v-list-tile-content>
+
+					<v-list-tile-title>{{ link.text }}</v-list-tile-title>
+
+				<v-list-tile-content>
+
+			</v-list-tile>
+
+		</v-list>
+
+
+
+	
 
 
 
