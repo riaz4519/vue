@@ -279,6 +279,35 @@
 
 		</v-list>
 
+11.Vuetify Tutorial #11 - Adding Routes
+
+	adding 
+		projects
+		team
+		Dashboard
+
+	--changing the routes at route.js
+
+		example :
+			import Dashboard from './views/Dashboard.vue'
+
+			-routes 
+
+				import Router from 'view-router'
+
+				Vue.use(Router)
+
+				export defaults new Router([
+
+					{
+						path:'/',
+						name:'dashboard',
+						component:Dashboard
+					}
+				])
+
+12.Vuetify Tutorial #12 - Padding & Margin
+
 
 
 	

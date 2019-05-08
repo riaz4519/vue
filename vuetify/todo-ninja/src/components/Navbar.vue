@@ -2,7 +2,7 @@
 <template>
 
         <nav>
-           <v-toolbar  flat app color>
+           <v-toolbar   flat app color>
 
                <v-toolbar-side-icon class="grey--text" @click="drawer=!drawer">
 
