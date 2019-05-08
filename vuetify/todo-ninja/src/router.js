@@ -24,12 +24,12 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component:Projects
     },
-      {
+    {
 
-          path: '/team',
-          name: 'team',
-          component: Team
+      path: '/team',
+      name: 'team',
+      component: Team
 
-      }
+    }
   ]
 })
