@@ -392,18 +392,238 @@
 
 		grid system
 
+14.Vuetify Tutorial #14 - Grid System (part 2)
 
+		making the project using xs12 md6 sm4 and many more 
+
+		alson using 
+
+		v-layout -with - wrap and flat
+
+				v-flex 
+
+		- using padding pa-3 which says padding all side
+
+		-using v-card 
+
+		**actual code
+
+		<v-card flat class="pa-3">
+
+		       <v-layout row wrap>
+
+		         <v-flex xs12 md6>
+		           <div class="caption grey--text">Project Title</div>
+		           <div>Create a website</div>
+		         </v-flex>
+
+		         <v-flex xs6 sm4 md2>
+		           <div class="caption grey--text"> Person</div>
+		           <div>The net ninja</div>
+
+
+		         </v-flex>
+
+		         <v-flex xs6 sm4 md2>
+
+		           <div class="caption grey--text">Due By</div>
+		           <div>1st jan 2019</div>
+
+
+		         </v-flex>
+
+		         <v-flex xs2 sm4 md2>
+		           <div class="caption grey--text">Status</div>
+		           <div>Ongoing</div>
+
+
+		         </v-flex>
+
+		       </v-layout>
+
+		     </v-card>
+
+
+15.Vuetify Tutorial #15 - Dummy Project Data
+
+	in this tutorial we will use project dummy data to populate out cards
+
+		*****how to use normal class and dynamic class together
+
+				:class="``" -using backtics
+
+				:class="`pa-3 project ${project.status}`"
+
+		- v-divider works like horijontal line
+
+
+		** the code from the tutorial
+
+			<v-card flat class="pa-3 " v-for="(project,index) in projects" :key="index">
+
+			        <v-layout  row wrap :class="`pa-3 project ${project.status}`">
+
+			          <v-flex xs12 md6>
+			            <div class="caption grey--text">Project Title</div>
+			            <div>{{ project.title}}</div>
+			          </v-flex>
+
+			          <v-flex xs6 sm4 md2>
+			            <div class="caption grey--text"> Person</div>
+			            <div>{{ project.person}}</div>
+
+
+			          </v-flex>
+
+			          <v-flex xs6 sm4 md2>
+
+			            <div class="caption grey--text">Due By</div>
+			            <div>{{ project.due}}</div>
+
+
+			          </v-flex>
+
+			          <v-flex xs2 sm4 md2>
+			            <div class="caption grey--text">Status</div>
+			            <div>{{ project.status}}</div>
+
+
+			          </v-flex>
+
+			        </v-layout>
+
+			      </v-card>
 
 	
 
+16.Vuetify Tutorial #16 - Chips
+
+	**
+		start with v-chip
+			<v-chip></v-chip>
+
+	<div class="right">
+
+	  <v-chip :class="`${project.status} white--text caption my-2`">{{ project.status}}</v-chip>
+
+	</div>
+
+
+17.Vuetify Tutorial #17 - Sorting Projects
+
+
+	sortBy(prop) {
+
+
+	     this.projects.sort((a,b) => a[prop] < b[prop] ? -1 : 1 );
+
+	 }
 
 
 
+18.Vuetify Tutorial #18 - Tooltips
+
+	The v-tooltip component is useful for conveying information when a user hovers over an element. You can also programmatically control the display of tooltips through a v-model
+
+	-start 
+
+		<v-tooltip top>
+
+			<v-btn slot="activator"></v-btn>
+
+			<span>here goes the tooltip message</span>
+
+		</v-tooltip>
+
+	-top 
+
+		means on hover the tooltip will apear on top 
+
+		there is other positioning to check at the documentation
 
 
+19.Vuetify Tutorial #19 - Cards
+
+	
+	v-card its a card system 
+
+	- v-card 
+
+		<v-card></v-card>
+
+		start with this
+
+	-responsice image 
+
+		<v-responsive>
+
+		</v-responsive>
+
+	-card text
+
+		<v-card-text>
+
+		</v-card-text>
+
+	-card button 
+
+		<v-card-actions>
+
+		<v-card-actions>
+
+	- text responsiveness
+
+		class="text-xs-center"
+
+	** original code
+
+		<v-layout row wrap>
+
+		    <v-flex  xs12 sm6 md4 lg3 v-for="(person,index) in team" :key="index">
+
+		        <v-card flat class="text-xs-center ma-3">
+
+		            <v-responsive class="pt-4">
+
+		                Image Goes here
+
+		            </v-responsive>
+
+		            <v-card-text>
+
+		                <div class="subheading">{{ person.name}}</div>
+		                <div class="grey--text">{{ person.role}}</div>
+
+		            </v-card-text>
+
+		            <v-card-actions >
+
+		                <v-btn flat color="grey">
+
+		                    <v-icon small left>message</v-icon>
+
+		                    <span>Message</span>
+
+		                </v-btn>
+
+		            </v-card-actions>
+
+		        </v-card>
 
 
+		    </v-flex>
 
+		</v-layout>
 
+20.Vuetify Tutorial #20 - Avatars
 
+	avart is image showing system 
 
+	- v-avatar
+
+		
+		<v-avatar size="100" class="grey lighten-4">
+
+		    <img :src="person.avatar" >
+
+		</v-avatar>
