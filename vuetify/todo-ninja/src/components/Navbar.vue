@@ -14,12 +14,39 @@
 
                <v-spacer></v-spacer>
 
+               <!--drop down menu-->
+
+               <v-menu offset-y>
+
+                   <v-btn flat slot="activator" color="grey">
+
+                       <v-icon left>expand_more</v-icon>
+                       <span>Menu</span>
+
+                   </v-btn>
+
+                   <v-list>
+
+                       <v-list-tile v-for="(link,index) in links" :key="index" router :to="link.route">
+
+                           <v-list-tile-action>
+                               <v-icon small>{{ link.icon}}</v-icon>
+                           </v-list-tile-action>
+
+                           <v-list-tile-title>{{ link.text}}</v-list-tile-title>
+
+                       </v-list-tile>
+
+                   </v-list>
+
+               </v-menu>
+
+
+
+
 
                <v-toolbar-items class="hidden-sm-and-down">
 
-                   <v-btn flat>Link One</v-btn>
-                   <v-btn flat>Link Two</v-btn>
-                   <v-btn flat>Link Three</v-btn>
                    <v-btn flat color="grey">
 
                        <span>Sign Out</span>
@@ -46,6 +73,14 @@
                         </v-avatar>
 
                         <p class="white--text subheading mt-1">Fahim md riaz</p>
+
+                    </v-flex >
+
+
+
+                    <v-flex class="mt-4 mb-3">
+
+                        <Popup />
 
                     </v-flex>
 
@@ -75,6 +110,7 @@
 
 <script>
 
+    import Popup from './Popup.vue'
     export default{
 
         data(){
@@ -92,7 +128,11 @@
                 ]
 
             }
+        },
+        components:{
+            Popup
         }
+
 
 
     }

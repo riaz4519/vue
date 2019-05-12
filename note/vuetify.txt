@@ -12,7 +12,7 @@
 		
 
 	-install vuetify plugin
-		--vue add vuetify
+		--vuex add vuetify
 
 		-we have vuetify installed in plugin folder and its has already changed our vue.
 
@@ -627,3 +627,155 @@
 		    <img :src="person.avatar" >
 
 		</v-avatar>
+
+21.Vuetify Tutorial #21 - Expansion Panels
+
+	The v-expansion-panel component is useful for reducing vertical space with large amounts of information. The default functionality of the component is to only display one expansion-panel body at a time; however, with the expandable property, the expansion-panel can remain open until explicitly closed.
+
+
+	** start with 
+
+		<v-expension-panel>
+
+		</v-expension-panel>
+
+	**expension content
+
+		<v-expension-content>
+
+
+
+		</v-expension-content>
+
+	**expension panel header 
+
+		<div slot="header">Header goes here</div>
+
+			-slot work like a toggole able button
+
+		-- and rest of the body
+
+			<v-card>
+			    <v-card-text class="px-4 grey--text">
+			        <div class="font-weight-bold">due by {{ project.due}}</div>
+
+			        <div>
+			            {{ project.content}}
+
+			        </div>
+			    </v-card-text>
+			</v-card>
+
+	**filter computed for filtering
+
+		myProjects:function () {
+
+		    return this.projects.filter(project =>{
+		        return project.person ==='The Net Ninja'
+		    })
+		    
+		}
+22.Vuetify Tutorial #22 - Menus
+
+	The v-menu component shows a menu at the position of the element used to activate it.
+
+		-- v-menu
+
+		--slot
+
+			slot="activator"
+
+		--offset-y
+
+			for put in under the button
+
+		-v-list
+               <v-menu offset-y>
+
+                   <v-btn flat slot="activator" color="grey">
+
+                       <v-icon left>expand_more</v-icon>
+                       <span>Menu</span>
+
+                   </v-btn>
+
+                   <v-list>
+
+                       <v-list-tile v-for="(link,index) in links" :key="index" router :to="link.route">
+
+                           <v-list-tile-title>{{ link.text}}</v-list-tile-title>
+
+                       </v-list-tile>
+
+                   </v-list>
+
+               </v-menu>
+
+
+23.Vuetify Tutorial #23 - Popups (dialogs)
+
+	The v-dialog component inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks. Use dialogs sparingly because they are interruptive.
+
+	popup work like modal in bootstrap 
+
+	--start with  a 
+
+		<v-dialog>
+
+		</v-dialog>
+
+	--in that dialog there will be button with a slot which will be act as a activator of that button 
+
+		<v-btn slot="activator">Click to activate</btn>
+
+	-and the button click will activate  a card which is eventuallly called as our popup or dialog
+
+		<v-card>
+
+		<v-card-title>
+
+			<h1>Titlehoes </h1>
+
+		</v-card-title>
+
+		</v-card>
+
+
+		**actual code
+
+		<v-dialog max-width="600px">
+
+		    <v-btn flat slot="activator" class="primary">Add new Prject</v-btn>
+
+		    <v-card>
+
+		        <v-card-title>
+		            <h2>Add a new project</h2>
+		        </v-card-title>
+
+		    </v-card>
+
+		</v-dialog>
+
+24.Vuetify Tutorial #24 - Form Basics
+
+	in this one we get a basic idea for what forms are how they work and we add them to our popup or dialog
+
+	--v-form
+
+		<v-form>
+
+		</v-form>
+
+		this for starting the form our all form operation will be happening in that v-form tag
+
+	-v-text-field
+
+		<v-text-filed prepend-icon="folder" label="title" v-model="title"></v-text-field>
+
+		-prepend-icon for adding icon to field
+
+		-label for the label 
+
+		- v-model for the two way model binding
+
