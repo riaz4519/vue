@@ -779,3 +779,77 @@
 
 		- v-model for the two way model binding
 
+
+25.Vuetify Tutorial #25 - Datepickers
+
+	Datepicker are normally used for selecting dates .There is varities of date picker in vuejs .check the documentation
+
+	** we want date picker to show like menu so we are using menu
+
+		here the activator will active the date-picker 
+
+		<v-menu>
+
+		    <v-text-field :value="formatedDate" slot="activator" label="Due date" prepend-icon="date_range"></v-text-field>
+
+		    <v-date-picker v-model="due" >
+
+		    </v-date-picker>
+
+		</v-menu>
+
+	** we are also using date-fns to format any date in here 
+
+		-install 
+
+			npm install date-fns --save
+
+			import format from  'date-fns/format'
+
+			computed:{
+
+			    formatedDate:function () {
+
+			        return this.due ? format(this.due,'Do MMM YYYY') : ''
+			    }
+			}
+
+26.Vuetify Tutorial #26 - Simple Form Validation
+
+	** :rules="inputRules"
+
+		:rules is a attribute for defining rules
+
+	then 
+
+		on data()
+
+			inputRules:[
+
+				v => v.length >= 3 || 'Minimum 3 characters'
+
+			]
+
+	** validating the form after clicking
+
+		<v-btn @click="submit">submit</v-btn>
+
+
+		-we will profide a ref to form
+
+			<v-form ref="form">
+
+			<v-form>
+
+
+		-now on method 
+
+			submit:fumcton(){
+
+				if(this.$refs.form.validate()){
+
+				console.log(this.title,this.content);
+
+				}
+
+			}
