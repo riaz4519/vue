@@ -853,3 +853,98 @@
 				}
 
 			}
+
+
+27.Vuetify Tutorial #27 - Firestore Databases
+
+		discuss about fire base and how to create one database.
+
+		firestore.google.com
+
+		-create one project 
+
+		-create applicaion access
+
+		-cloud fire store
+
+		-go to console
+		-create database 
+
+		-create a table 
+
+28.Vuetify Tutorial #28 - Adding Firestore Data
+
+		**install firebase
+
+				npm install firebase --save
+
+		-after install we need fire base creadential to connect to firebase
+
+		fb.js
+
+				import firebase from 'firebase/app'
+				import 'firebase/firestore'
+
+				var firebaseConfig = {
+				    apiKey: "AIzaSyDyBJ0ZJIWt4adxl0POqn4aKuT37CFZyHo",
+				    authDomain: "todo-ninjs.firebaseapp.com",
+				    databaseURL: "https://todo-ninjs.firebaseio.com",
+				    projectId: "todo-ninjs",
+				    storageBucket: "todo-ninjs.appspot.com",
+				    messagingSenderId: "778405607654",
+				    appId: "1:778405607654:web:37047bfe6d42377c"
+				};
+				// Initialize Firebase
+				firebase.initializeApp(firebaseConfig);
+				const db = firebase.firestore();
+
+				/*db.settings({ timestampsInSnapshots: true});*/
+
+				export default db;
+
+		-import it to the popup.vue
+
+		-on submit
+
+				const project = {
+
+				    title:this.title,
+				    content:this.content,
+				    due:format(this.due,'Do MMM YYYY'),
+				    person:'Fahim Md. Riaz',
+				    status:'ongoing'
+				}
+
+				db.collection('projects').add(project).then(() => {
+				    console.log('added to db');
+				})
+
+
+29.Vuetify Tutorial #29 - Button Loaders
+
+		- just a prop
+
+				:loading="loading"
+
+				make it true when need to be loading 
+
+				make it false to stop
+
+	*Close dialog
+
+			v-model="dialog"
+
+			make this dialog variablbe false for hide
+
+30.Vuetify Tutorial #30- Snackbars
+
+	** first 
+
+            <v-snackbar v-model="snackbar" top :timeout="4000"  color="success">
+
+                <span> Awesome ! You added a new project.</span>
+                
+                <v-btn flat color="white" @click="snackbar = false">Close</v-btn>
+
+            </v-snackbar>
+
