@@ -199,6 +199,69 @@
 
         <!--end Direction and Align-->
 
+        <!--Row and column breakpoints-->
+        <v-layout my-4>
+
+            <v-flex xs12>
+                <h2>Row and column breakpoints</h2>
+
+            </v-flex>
+
+        </v-layout>
+
+        <v-layout  v-bind="binding">
+            <v-flex>
+                <v-card dark color="primary">
+                    <v-card-text>one</v-card-text>
+                </v-card>
+            </v-flex>
+            <v-flex>
+                <v-card dark color="secondary">
+                    <v-card-text>two</v-card-text>
+                </v-card>
+            </v-flex>
+            <v-flex>
+                <v-card dark color="accent">
+                    <v-card-text>three</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <!--end Row and column breakpoints-->
+
+
+        <!--shirnk -->
+        <v-layout row>
+            <v-flex grow pa-1>
+                <v-card dark color="green darken-3">
+                    <v-card-text>#1 Im a Grow Flex</v-card-text>
+                </v-card>
+            </v-flex>
+            <v-flex  shrink pa-1>
+                <v-card  dark color="green darken-1">
+                    <v-card-text>#2 Im a Shrink Flex</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+        <v-layout row>
+            <v-flex grow pa-1>
+                <v-card dark color="green darken-3">
+                    <v-card-text>#1 Im a Grow Flex</v-card-text>
+                </v-card>
+            </v-flex>
+            <v-flex shrink pa-1>
+                <v-card dark color="green darken-3">
+                    <v-card-text>#2 Im a Shrink Flex</v-card-text>
+                </v-card>
+            </v-flex>
+            <v-flex  grow pa-1>
+                <v-card  dark color="green darken-1">
+                    <v-card-text>#3 Im a Grow Flex</v-card-text>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
 
 
     </v-container>
@@ -209,6 +272,18 @@
 
     export  default{
 
+        computed:{
+
+            binding:function () {
+
+                const binding = {};
+
+                if (this.$vuetify.breakpoint.mdAndUp) binding.column = true;
+
+                return binding;
+            }
+
+        }
 
 
     }
