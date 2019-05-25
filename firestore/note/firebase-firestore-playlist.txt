@@ -254,3 +254,5 @@
 				renderCafe(doc)
 			})
 		})
+
+		**using where and orderBy together needs to enabled indexing firstS
