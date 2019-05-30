@@ -39,7 +39,7 @@
 
                     </v-list-tile-action>
 
-                    <v-listi-tile-title>Home</v-listi-tile-title>
+                    <v-list-tile-title>Home</v-list-tile-title>
 
                 </v-list-tile>
 

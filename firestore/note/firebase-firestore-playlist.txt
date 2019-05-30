@@ -1,0 +1,258 @@
+2.firebase Firestore Tutorial #2 - Setting up Firestore
+
+	-how to open a project in firebase
+
+		-first goto firebase.google.com
+
+		-goto to console at the right corner
+
+		-add project 
+
+			-give name of the project 
+
+			-location 
+
+			-accept the terms and condition
+
+			-create 
+
+		*select database and and create a database with firestore
+
+			-collection 
+
+				are like table in our mysql database
+
+				-create collection 
+
+				-create field 
+
+		*connect to the firebase
+
+			-go to overview 
+
+				-create an app for web
+
+					<!-- The core Firebase JS SDK is always required and must be listed first -->
+					//firebase
+					<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+					//firestore
+					<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+
+					<script>
+					    // Your web app's Firebase configuration
+					    var firebaseConfig = {
+					        apiKey: "AIzaSyBfQ9vyMu1_b8JdUSrn2iEimC0tZE-tMQs",
+					        authDomain: "ninja-firestore-tut-18df1.firebaseapp.com",
+					        databaseURL: "https://ninja-firestore-tut-18df1.firebaseio.com",
+					        projectId: "ninja-firestore-tut-18df1",
+					        storageBucket: "ninja-firestore-tut-18df1.appspot.com",
+					        messagingSenderId: "579832524783",
+					        appId: "1:579832524783:web:541a0ca822dec8f3"
+					    };
+					    // Initialize Firebase
+					    firebase.initializeApp(firebaseConfig);
+
+					    //configure firestore
+					    const  db = firebase.firestore();
+					    /*db.settings({ timestampsInSnapshots: true });*/
+					</script>
+
+3.Firebase Firestore Tutorial #3 - Getting Documents
+
+	in this tutorial we are gonna get the values from the firbase
+
+		1.retrivin data from the firebase
+
+
+			db.collection('cafes').get().then((snapshot) => {
+
+				snapshot.docs.forEach(doc => {
+
+
+					renderCafe(doc);
+
+				});
+			});
+
+
+			-selcetion name of the collection 
+
+			-get the collection 
+
+			-after gettin the collection get a snapshot of the all the collecion 
+
+			-cycle throug data 
+
+
+			**real code
+
+				const  cafeList = document.querySelector('#cafe-list');
+				/*getting data from the database*/
+
+				//create element and render cafe
+
+				function renderCafe(doc) {
+
+				    let li = document.createElement('li');
+
+				    let name = document.createElement('span');
+
+				    let city = document.createElement('span');
+
+				    li.setAttribute('data-id',doc.id)
+
+				    name.textContent = doc.data().name;
+				    city.textContent = doc.data().city;
+
+				    li.appendChild(name);
+				    li.appendChild(city);
+
+				    cafeList.appendChild(li);
+
+
+				}
+
+				//getting the collection
+
+				db.collection('cafes').get().then((snapshot) => {
+
+				    snapshot.docs.forEach(doc => {
+
+				        renderCafe(doc)
+
+				    })
+
+				});
+
+4.Firebase Firestore Tutorial #4 - Saving Data
+
+	in this we will create a form and upload data to firebase database
+
+
+		-first creating form 
+
+
+			<form id="add-cafe-form">
+
+				<input type="text" name="name" placeholder="Cafe Name">
+				<input type="text" name="city" placeholder="Cafe City">
+				<button>Add Cafe</button>
+
+
+			</form>
+
+		-second reference the form 	
+
+			const form = document.querySelector('#add-cafe-form');
+
+		-add submit listener to the form
+
+			form.addEventListener('submit',() => {
+
+
+
+			});
+
+		-now add 
+
+
+			form.addEventListener('submit',() => {
+
+					db.collection('cafes').add({
+
+						name:form.name.value,
+						city:form.city.value,
+
+					});
+
+
+			});
+
+		-empty the form
+
+			form.name.value = '';
+
+			form.city.value = '';
+
+
+
+5.Firebase Firestore Tutorial #5 - Deleting Data
+
+
+	this video is for deleting a record in the list
+
+	-making cross item
+
+		let cross = document.createElement('div')
+
+	-populatin the cross with textContent
+
+		cross.textContent = 'x'd;
+
+	-appending the the main list
+
+		li.appendChild(cross);
+
+	-now adding listener to the cross
+
+		cross.addEventListener('click',(e) => {
+
+			e.stopPropagation();
+
+		})
+
+	- getting id of the li tag that we have set at first
+
+
+
+		cross.addEventListener('click',(e) => {
+
+
+			let id = e.target.parentElement.getAttribute('data-id');
+
+			//delete
+
+			db.collection('cafes').doc(id).delete();
+
+		})
+
+
+6.Firebase Firestore Tutorial #6 - Making Queries
+
+	db.collection('cafes').where('city','==','ctg').get().then((snapshot) => {
+
+		snapshot.docs.forEach(doc => {
+
+			renderCafe(doc)
+		})
+	})
+
+
+	-where clouse
+
+7.Firebase Firestore Tutorial #7 - Ordering Data
+
+	db.collection('cafes').orderBy('name').get().then((snapshot) => {
+
+		snapshot.docs.forEach(doc => {
+
+			renderCafe(doc)
+		})
+	})
+
+
+	-capital later come before small one
+
+	-we can also add where method to 
+
+
+		db.collection('cafes').where('city','==','dhaka').orderBy('name').get().then((snapshot) => {
+
+			snapshot.docs.forEach(doc => {
+
+				renderCafe(doc)
+			})
+		})
+
+		**using where and orderBy together needs to enabled indexing firstS
