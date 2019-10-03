@@ -1,0 +1,72 @@
+section 2 :
+
+    4.what is vue js
+
+    5.setting up vue instance
+
+        -first link the cdn
+
+        -create a div and with id app
+
+            <div id="app">
+            </div>
+
+        - vue will control all the element inside this div
+
+    6.vue instance
+
+        new Vue({
+
+            el:"#app",
+            data:{
+              title:'Becoming a vue ninja',
+            },
+
+        });
+
+        -it control the application where id is #app
+
+    7. Methods
+
+        is a object
+
+        - methods:{
+
+            }
+
+        -declare
+
+            methods:{
+
+                greet(time){
+
+                    return 'data';
+
+                }
+            }
+
+        -calling  a method
+
+            -{{ greet('param') }}
+
+    8. Data Binding
+
+        v-bind - is a directive
+
+        we can bind attribute with it .and after binding we can execute variable ther
+        like normal data object
+
+       -how it works
+
+            v-bind:name_of_the_attribute="variable"
+
+            v-bind:href="url"
+
+            -sort
+                :href="url"
+
+
+
+
+
+

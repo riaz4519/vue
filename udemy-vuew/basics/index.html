@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <style>
+        .one{
+
+            color: green;
+
+        }
+        .two{
+
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Vue basics</h1>
+
+<div id="app">
+    <h2>{{ title}}</h2>
+    <p>{{ greet('Morning') }}</p>
+    <a :href="url">Hello world</a>
+    <div v-bind:class="classes">
+
+        fdsgdfgsd gdsg g
+    </div>
+
+    <input type="text" v-bind:value="name">
+</div>
+
+<script type="module" src="app.js"></script>
+
+
+</body>
+</html>
