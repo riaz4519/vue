@@ -5,15 +5,13 @@
     <title>Title</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <style>
-        .one{
+    .canvas{
+        height: 300px;
+        width: 300px;
+        margin-top: 20px;
+        background: #ddd;
 
-            color: green;
-
-        }
-        .two{
-
-            text-decoration: line-through;
-        }
+    }
     </style>
 </head>
 <body>
@@ -21,15 +19,11 @@
 <h1>Vue basics</h1>
 
 <div id="app">
-    <h2>{{ title}}</h2>
-    <p>{{ greet('Morning') }}</p>
-    <a :href="url">Hello world</a>
-    <div v-bind:class="classes">
 
-        fdsgdfgsd gdsg g
-    </div>
+    <grettings></grettings>
+    <grettings></grettings>
 
-    <input type="text" v-bind:value="name">
+
 </div>
 
 <script type="module" src="app.js"></script>

@@ -1,6 +1,9 @@
 section 2 :
 
     4.what is vue js
+        is a progressive JavaScript Framework.its light but
+        have all the functionality as other framework  like
+        react and angular.
 
     5.setting up vue instance
 
@@ -35,6 +38,7 @@ section 2 :
             }
 
         -declare
+            -method is an object
 
             methods:{
 
@@ -64,6 +68,753 @@ section 2 :
 
             -sort
                 :href="url"
+
+
+    9.Events
+
+        -event is action in vue js
+
+        -structure
+
+            - v-on:nameOfTheEvent="data/method"
+
+            <button v-on:click="data/method">
+
+            -click event
+
+                <button v-on:click="wage++"></button>
+                <button v-on:click="increaseWage(5)"></button
+
+            -dblclick
+
+                <button v-on:dblclick=""></button>
+
+    10. The Event Object
+
+        when we click on the button it automatically file a event object
+
+            <button @click="logEvent"></button>
+
+            logEvent(e){
+
+
+            }
+            -
+                logCoords(e){
+
+                    this.coords.x = e.offsetX
+                    this.coords.y = e.offsetY
+                }
+
+    11. Keyboard Events
+
+        -keypress
+
+            <input @keypress="dataPress">
+
+
+            methods:{
+
+                dataPress(e){
+
+                    console.log(e.target.value)
+
+                }
+
+
+            }
+        -keyup
+
+        -kind of act like two way data binding
+
+    12. Two-way Data Binding (v-model)
+
+        -declare
+
+            <input type="text" v-model="name">
+
+        -it will update the filed name every time the value updates
+
+    13. Modifiers
+
+        - @click.alt="method"
+
+        -@click.shift="method"
+
+        -@click.prevent="method"
+
+    14. Conditional Output with v-if
+
+        -its a directive
+
+        v-if="condition"
+
+        v-else-if="condition"
+
+        v-else
+
+    15. Looping with v-for
+
+        -is for iterating
+
+        - v-for with array
+
+            <ul>
+                <li v-for="item in items>
+                    {{items}}
+                </li>
+
+        - v-for with object
+
+            <div v-for="ninja in ninjas>
+                {{ninja.name}}
+                {{ninja.age}}
+            </div>
+
+        - v-for with index
+
+            <li v-for="(item,index) in items">
+
+    ***Computed Properties
+
+        -why we need computed properties
+            -when we are running a method .All the method tha are being called to the vue page will execute .like if we call
+            method a() and if there is a method b() at the page it will be called to .Where as in computed properties only that
+            particular  method will be called.
+
+            -creating
+
+                computed:{
+
+                    addToa:function(){
+
+
+                    }
+
+                }
+
+    **dynamic Css
+
+        v-bind:class="{nearby:true}"
+
+        *computed properties will be called when a value of a computed properties are changed.
+
+    **multiple vue instances
+
+        we can create multiple instances in vue and control multiple part of the page. and also we can communicate between those
+        instances.
+
+        var one = new Vue({
+
+            data:{
+                title:"data"
+            }
+
+        })
+
+        var two = new Vue({
+
+            data:{
+                title:"Second Data"
+            }
+
+            methods:{
+
+                changeTitle(){
+
+                    one.title = "Changed from two"
+                }
+            }
+        })
+
+    **intro to components
+
+        Vue.components('nameOfTheComponents',{
+            template:'<p> hey there i am re-useable {{name}} components </p><button v-on:click="changeName">Change Name</button>',
+
+            data:function(){
+
+                return{
+
+                    name:"Fahim"
+
+                }
+
+            },
+            methods:{
+                changeName:function(){
+                    this.name = "maria"
+                }
+            }
+        })
+
+        -use this components
+
+            <div id="app">
+
+                <nameOfTheComponents></nameOfTheComponents>
+            </div>
+
+                -it will show the value
+
+    ***Refs
+        -ref is like id in html
+
+        -defining refs
+
+            <input ref="nameOfTheRef">
+        -accessing refs
+
+            readRef:function(){
+
+                console.log(this.$refs.nameOfTheRefs.propertyName)
+
+                example:
+                    this.$refs.input.value
+
+            }
+
+
+
+
+
+    16. The Vue CLI
+
+        -install
+
+            npm install -g @vue/cli
+
+        -create project
+
+            vue create cli1
+
+        -run
+
+            npm run serve
+
+    17. Components & Vue Files
+
+        -running local serve
+
+            npm run serve
+
+        -index
+
+            public/index  is the main file to build and run the website
+
+        -src folder
+
+            place for component and script
+
+        -main.js
+
+        - .vue is the extension
+
+        -each component can have only one root element
+
+        -export default allows us to import file
+
+        - app.vue is the root component
+
+    18. The data() Function
+
+        -each component get its on data object
+
+        -any template start with
+
+            <template>
+                -here will be a root component
+            </template>
+
+            -then a script tag
+
+                <script>
+                    export default{
+
+                        data(){
+
+                            return{
+
+                            -here goes the data properties
+                            }
+
+                            }
+
+
+                        }
+
+                    }
+
+                </script
+
+                -style
+
+    19. Nesting Components
+
+        -in the main component we can nest other component
+
+        -name of the vue file start with capital
+
+        -importing a component
+
+            import navbar from './component/Navbar'
+
+        -making it a available for the component
+
+            export default{
+
+                name:"app",
+                components:{
+                    Navbar or navbar/Navbar:Navbar
+                }
+                },
+
+                data(){
+                }
+
+
+            }
+        -insert the component
+
+            <template>
+
+               <div>
+                    <Navbar/>
+               </div>
+
+            </template
+
+    *nesting components example
+
+        -scoped
+
+            its a keyword used for use css only to that page or that vue template.
+
+        -header
+
+            <template>
+                <header>
+                    <h1>{{ title}}</h1>
+                </header>
+            </template>
+
+            <script>
+                export default {
+                    name: "Header",
+                    data:function () {
+
+                        return {
+                            title:'My First App'
+                        }
+                    }
+                }
+            </script>
+
+
+
+        -footer
+
+            <template>
+
+                <footer>
+                    <p>{{ copyright}}</p>
+                </footer>
+
+            </template>
+
+            <script>
+                export default {
+                    name: "Footer",
+                    data:function () {
+
+                        return {
+                            copyright:"Copyright 2019 Fahim"
+                        }
+                    }
+                }
+            </script>
+
+
+
+        -main content or ninjas
+
+            <template>
+                <div id="ninjas">
+
+                    <ul>
+                        <li v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
+                            <h2>{{ ninja.name }}</h2>
+                            <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
+                        </li>
+                    </ul>
+                </div>
+
+            </template>
+
+            <script>
+                export default {
+                    name: "Ninjas",
+                    data:function () {
+
+                        return {
+                            ninjas:[
+                                {name: 'Ryu', speciality: 'Vue Components', show: false},
+                                {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
+                                {name: 'Hitoshi', speciality: 'Click Events', show: false},
+                                {name: 'Tango', speciality: 'Conditionals', show: false},
+                                {name: 'Kami', speciality: 'Webpack', show: false},
+                                {name: 'Yoshi', speciality: 'Data Diggin', show: false}
+                            ]
+                        }
+                    }
+                }
+            </script>
+
+
+
+        -main app vue
+
+            <template>
+              <div id="app">
+                <app-header></app-header>
+                <app-ninjas></app-ninjas>
+                <app-footer></app-footer>
+
+              </div>
+            </template>
+
+            <script>
+
+              import Header from './components/Header'
+              import Footer from  './components/Footer'
+              import Ninjas from './components/Ninjas'
+
+            export default {
+              name: 'app',
+              components:{
+
+                'app-header':Header,
+                'app-footer':Footer,
+                'app-ninjas':Ninjas
+
+              },
+
+              data(){
+
+                return {
+
+                  title:"my first vue app",
+                }
+              }
+
+            }
+            </script>
+
+
+    20.Scoped CSS
+
+    21. Passing Data with Props
+
+        -key
+
+            -vue like to identify each value that it output .that's why it need key for each item
+
+            <div v-for="(friend ,index) in friends" v-bind:key="index">
+
+        -why we need props
+
+            -for passing value from one component to another
+            -data sharing across the components
+            -props is an array
+
+        -send props
+            -we will send data from app.vue to other
+
+                <AllFriends v-bind:nameThatWillReceive="NameOfTheVariable"/>
+                or
+                <AllFriends :nameThatWillReceive="NameOfTheVariable"/>
+
+                example:
+                        <AllFriends :friends="friends"/>
+
+
+
+        -revive props
+
+            export default{
+
+                props:['friends']
+
+
+
+            }
+            -props with type it will be object
+
+                props:{
+                friends:array
+                }
+
+        -using props
+
+            -using it like normal value
+
+                <div for="(friend,index) in friends" :key="index">
+                </div>
+
+
+        -why we use data binding
+
+            -normally we use data binding for showing dynamic value .Like the variable or attributes that we have in vueJs
+
+                we can not output it on normal way
+
+    ***primitive vs reference type
+
+        -primitive type
+            -string
+            -boolean
+            -numbers
+
+            -explain
+                with primitive type it will just change on the component only
+        -reference type
+            -objects
+            -arrays
+
+            -explain
+                -when we are sending reference  a props across the the component and after passing that to the component and the change
+                it there it will change in the the main component to and also to all the component using this props.
+
+    22. Custom Events
+
+        -why we need it
+            -custom events is use for send action from child component to parent component
+        -how create and send
+
+            -any action to method
+
+                delete:function(value){
+
+                    this.$emit('nameOftheemit',{param:value,param:value})
+                }
+
+        -how to receive and use
+
+            -we will receive from the parent component
+
+                <child-component @nameOftheemit="actionmethod" />
+
+                -this method will have any parenthesis
+
+                methods:{
+
+                    actionmethod:function(payload){
+
+                        action
+
+                            this.friends = this.friends.filter(friend =>{
+
+                                        return friend.name !== payload.name
+
+                                })
+
+
+                    }
+
+                }
+
+    ***Events (child to parent)
+        -why we needs to use Custom events in vue js?
+
+            -when we are using reference type and change a value
+
+        -another way off passing catching event data parameter ***this way does not work in new version***
+
+            <app-data v-on:changeTitle="updateTitle($events)"/>
+
+    ***The Event Bus
+
+        -why we need event bus instead of custom event?
+
+            -when we were using custom events we send back the event to the parent component then we have changed the value
+            from the root .But in event but need not to do that .because event bus is global it can listen from anywhere.
+
+
+        -where to crate event bus
+            -we can create event but any where but have to import it from there first.so the best practice is to create it on
+            main.js and then import
+
+        -create
+
+            main.js
+
+                const bus = new Vue()
+
+                -so as er can see event bus is just an instance of Vue()
+        -using
+
+            -we have to import it first to the component to use it.
+
+                import {bus} from '../main'
+
+            -now on method click we can use it
+
+                methods:{
+
+                    changeTitle:function(){
+
+                        bus.$emit('updateTitle',{param:param})
+                    }
+
+                }
+        -receive
+
+            -for receiving we have to use lifecycle hook
+
+                -in this case we are using the created()
+
+                    created(){
+
+                        bus.$on('updateTitle',(data)=>{
+
+                        //action goes here
+
+                        })
+                    }
+    23. Life-cycle Hooks
+
+        -what is life cycle hooks
+
+        -why we need lifecycle hooks ?
+
+        -where life cycle hooks are being created
+
+        -beforeCreate
+            -data not accessible
+            -events not accessible
+            -The beforeCreate hook runs at the very initialization of your component. data has not been made reactive,
+             and events have not been set up yet.
+         -created
+            In the created hook, you will be able to access reactive data and events are active. Templates and Virtual
+             DOM have not yet been mounted or rendered.
+
+         -Mounting (DOM Insertion)
+            Mounting hooks are often the most-used hooks, for better or worse. They allow you to access your component
+             immediately before and after the first render. They do not, however, run during server-side rendering.
+
+            Use if: You need to access or modify the DOM of your component immediately before or after the initial render.
+
+            Do not use if: You need to fetch some data for your component on initialization. Use created
+             (or created + activated for keep-alive components) for this instead, especially if you need that data
+              during server-side rendering.
+
+        -beforeMount
+
+
+    ***Slots
+
+        -what is slots
+
+            -slot is a directive for passing html to the child component
+
+        -why we need slots
+            -we use prop to send data to parent component to child component.what if we need to pass html elements .in
+            that case we use slots.
+
+        -how to use slots
+
+            -we send slots in between the starting tag and ending tag .which means we send in the body of the tag
+
+                <nameOfTheTag>
+                    <h1>this is my slot</h1>
+                    <p>This is my paragraph</p>
+                 </nameOfTheTag>
+
+             -access from the component
+
+                <slot />
+
+
+        -how to send named slots
+
+            <h1 slot="name">This is my name</h1>
+
+            -access
+
+                <slot name="name"></slot>
+
+        -* if we want to
+
+    **Dynamic Component
+
+        ****when registering component if we follow a convention
+
+            FormOne = (form-one) will be directly generate
+
+        -what is dynamic components
+
+            -is a way to change component in a field
+
+        -why we need dynamic component
+
+            - some time we need to change component back and forth .dynamic component is a way to do that.
+
+        -creating structure for dynamic components
+
+            <component is="nameOfTheComponent"> </component>
+
+        -what is "is" in dynamic component
+
+            -"is" is where we put the component which we want to out put.
+
+
+
+        -data binding in "is"
+
+            -we can dynamically change component using data binding
+
+                <component v-bind:is="property">
+
+        -how to get the old value when going back to the previous component
+
+            <keep-alive>
+                //component goes here
+            </keep-alive>
+
+    ***lazy input binding
+
+        -normally when we write to a form v-model shows us what we write every time.But if we want to write the whole
+        thing and then tab we then will see the output
+
+            v-model.lazy="bondin"
+
+    ***checkbox binding
+
+           <label>Ninjas</label>
+           <input type="checkbox" value="ninjas" v-model="blog.categories">
+           <label>Wizard</label>
+           <input type="checkbox" value="wizards" v-model="blog.categories">
+           <label>Mario</label>
+           <input type="checkbox" value="mario" v-model="blog.categories">
+           <label>Cheese</label>
+           <input type="checkbox" value="cheese" v-model="blog.categories">
+
+
+           -blog.categories is an array
+
+    ***select box binding
+                    <select v-model="blog.author">
+                        <option v-for="author in authors">{{ author}}</option>
+                    </select>
+
+
+
+
+
+
+
+
+
 
 
 
