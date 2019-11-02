@@ -807,17 +807,47 @@ section 2 :
                         <option v-for="author in authors">{{ author}}</option>
                     </select>
 
+    ***Vue JS 2 Tutorial #32 - HTTP Requests
 
+        -installing vue-resource
 
+            -npm install vue-resource --save
 
+        -how to use vue resource
 
+            -first import vue-resource
 
+                import VueResource from 'vue-resource'
 
+            -then activate
 
+                Vue.use(VueResource)
 
+            -json placeholder
 
+            -sending post request
 
+                 post:function () {
 
+                        this.$http.post('https://jsonplaceholder.typicode.com/posts',{
 
+                            title:this.blog.title,
+                            body:this.blog.content,
+                            userId:2
+                        }).then(function (data) {
+
+                            console.log(data)
+                            this.submitted = true
+                        })
+
+                    }
+
+                -lets mention something,as we have already use vue-resource with Vue.use so we can refer vue-resource as
+
+                'this'
+
+                        this.$http.post('there is the link to post',{object}).promise
+
+    **GET request
 
 
