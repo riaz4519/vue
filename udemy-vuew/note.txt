@@ -848,6 +848,120 @@ section 2 :
 
                         this.$http.post('there is the link to post',{object}).promise
 
-    **GET request
+    **GET request -with vue resource
+
+        -get request can get value from a database
+
+            -we do fetching on created
+
+                this.$http.get('url').then(function(values){
+
+
+                }
+                )
+            -example
+
+                created() {
+
+                    this.$http.get('https://jsonplaceholder.typicode.com/posts').then(function (data) {
+
+                        this.blogs = data.body.slice(0,10)
+
+                    })
+                }
+
+    ***custom directives
+
+        -directives fulfill a certain action / design for the element. like v-if ,v-on and so on .we can make custom directive for our own
+
+        -two types of directive is here
+
+            -without parameter
+
+                <div v-rainbow>
+
+                </div>
+
+                -we will make the directives on main.js which will be global
+
+                    Vue.directive('name',{
+
+                        //action goes here
+                        bind(el,binding,vnode){
+
+                            el.style.color = "#"+Math.random().toString().slice(2,8);
+
+                        }
+
+                    })
+                        -with this directive the element is getting random colors
+
+
+                    -el
+                        is the element where the directive is added
+
+                    -binding
+
+                        is passed parameter
+
+
+            -with parameter
+
+                <div v-theme="parameter">
+
+                </div>
+
+                -if the parameter is string then pass within a single quote
+
+                    v-theme="'wide'"
+
+                -implement
+
+                    Vue.directive('theme',{
+
+                        bind(el,binding,vnode){
+
+                            if(binding.value == "wide"){
+
+                                el.style.maxWidth = "1200px"
+
+                            }
+                            else if(binding.value == "narrow"){
+
+                                el.style.maxWidth = "600px"
+                            }
+
+                        }
+
+                    })
+
+            -with argument
+
+                v-theme:column="wide"
+
+                if(binding.arg == "column"){
+
+
+
+                }
+
+    ***filters
+
+        - filter are use for changing the output of a data.ite does not change the main data.
+
+            Vue.filters('to-uppercase',function(value){
+
+                return value.toUppercase()
+
+            })
+
+            -use
+
+                {{ blog.title | to-uppercase }}
+
+
+
+
+
 
 
