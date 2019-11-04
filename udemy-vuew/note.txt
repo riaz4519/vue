@@ -959,6 +959,116 @@ section 2 :
 
                 {{ blog.title | to-uppercase }}
 
+    ***custom search filter
+
+        -custom filter is not a feature in vue js.its a way of filter data or search data and return to vue.
+
+        -filter code
+
+            computed:{
+
+                    filteredBlogs:function () {
+
+                    return this.blogs.filter((blog) =>{
+
+                        return blog.title.includes(this.search)
+                    })
+                }
+
+            },
+
+        -vue
+
+
+            <input type="text" v-model="search" id="search" placeholder="search blogs">
+
+            <div v-rainbow class="single-blog" v-for="(blog,index) in filteredBlogs" v-bind:key="index">
+
+                <h2>{{ blog.title | to-uppercase}}</h2>
+                <article>{{blog.body | snippet}}</article>
+
+            </div>
+
+    ***Registering Things Locally
+
+        -when we are using filters and directive globally we register them in main.js.but when the filter and
+        directive used in one component only its better to declare them in the same component.
+
+            -filters in this case its a object
+
+                filters:{
+
+                    'to-uppercase':function(value){
+
+                        return ///value
+                    },
+                    'snippet':function(value){
+
+                        return //value
+                    }
+
+                }
+                **filter can be declare with out the quote but on those case we can not use '-' like this
+                we have to use camelcase and it will act like the same
+
+                    toUppercase = 'to-uppercase'
+
+            -directives
+
+                directives:{
+
+                    'theme':{
+
+                        bind(el,binding,vnode){
+
+
+                        }
+
+                    }
+
+                }
+
+    *** Mixins
+
+        -mixins are way of reusing codes in different components.
+
+            -declare
+
+                -have to make a js file first
+
+                    export default{
+
+                        computed:{
+
+                            filteredBlogs: function () {
+
+                                return this.blogs.filter((blog) => {
+
+                                    return blog.title.includes(this.search)
+                                })
+
+                            }
+
+                        }
+
+                    }
+
+            -use
+
+                -import it first
+
+                    import searchMixins from '../mixins/searchMixins'
+
+                -have to register it(its an array)
+
+                    mixins:[searchMixins,..,..]
+
+                -then
+
+                    use the functionality
+
+
+
 
 
 

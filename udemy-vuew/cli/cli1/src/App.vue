@@ -2,6 +2,7 @@
   <div id="app">
 
       <show-blogs></show-blogs>
+      <list-blogs></list-blogs>
 
   </div>
 </template>
@@ -10,11 +11,13 @@
 
 
 import ShowBlogs from './components/showblogs'
+import ListBlogs from './components/listBlogs'
 
 export default {
   name: 'app',
   components:{
-    ShowBlogs
+    ShowBlogs,
+      ListBlogs
 
 
   },
