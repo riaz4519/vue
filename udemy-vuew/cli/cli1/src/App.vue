@@ -1,23 +1,22 @@
 <template>
   <div id="app">
 
-      <show-blogs></show-blogs>
-      <list-blogs></list-blogs>
+
+      <blogs></blogs>
+
 
   </div>
 </template>
 
 <script>
 
-
-import ShowBlogs from './components/showblogs'
-import ListBlogs from './components/listBlogs'
+    import Blogs from  './components/Blogs'
 
 export default {
   name: 'app',
   components:{
-    ShowBlogs,
-      ListBlogs
+
+      Blogs
 
 
   },

@@ -1067,6 +1067,160 @@ section 2 :
 
                     use the functionality
 
+    24.Making Requests with Axios
+
+        -what is it
+
+            axios is a promise based HTTP Client for browser and node.js
+
+        -features
+
+            Make XMLHttpRequests from the browser
+            Make http requests from node.js
+            Supports the Promise API
+            Intercept request and response
+            Transform request and response data
+            Cancel requests
+            Automatic transforms for JSON data
+            Client side support for protecting against XSRF
+
+
+        -how to install
+
+            -npm install axios --save
+
+        -running a get request with axios
+
+            -first import it in the component
+
+                import axios from 'axios'
+
+            -if we want to fetch something on page load we will do it on created()
+
+                created(){
+
+                    axios.get('the url').then(response =>{
+
+                        //the code goes here
+
+                        this.posts = response.data
+
+                    });
+
+                }
+
+        -catch in axios
+
+            -we use catch there might be an error running the promise function
+
+                axios.get('url').then((response) =>{
+
+                }).catch(err =>{
+
+
+
+                })
+Section:4
+
+    25.What is Vue Router
+
+        -install
+
+            -npm install vue-router
+
+        -making a separate file
+
+            import Vue From 'vue'
+            import VueRouter from 'vue-router'
+            import HelloWorld from './components/HelloWorld'
+
+            Vue.use(VueRouter)
+
+            export default new VueRouter({
+                routes:[
+                    {
+                    path:'/',
+                    'name':'helloword'
+                    component:Helloworld
+
+                    }
+                ]
+            })
+
+        -adding to the main.js for global access of router
+
+            import router from './router/index'
+
+            new Vue({
+
+                router
+
+            })
+
+        -and adding the router-view app.vue
+
+            <router-view></router-view>
+
+
+    28.setting up component
+        -what does @ symbol means
+
+            -it means root of the project
+
+                -and here src is the root
+
+
+
+    29.Router Links
+
+        -getting all the router links
+
+            -https://stackoverflow.com/questions/36120996/get-all-routes-in-a-vue-router
+
+        -setting up router links
+
+            <router-link to="path"></router-link>
+
+        -setting up named route
+
+            -as we see
+
+                    {
+                    path:'/',
+                    name:'Home'
+                    component:Home
+
+                    }
+
+                -there is name property in the route object if we use this it will work as named route
+
+                    <router-link :to="{name:'Home'}"></router-link>
+
+    30.Route Parameter
+
+        -why we need route parameter
+
+        -how to setup route parameter
+
+            -we will add :parameterName
+
+            -example
+
+                {
+                    path:'/profile/:user_id',
+                    name:'ViewProfile',
+                    component:ViewProfile
+
+                }
+
+
+        -how to access route parameter
+
+            userId:this.$route.params.userId
+
+    31.Watching the $route Object
+
+
 
 
 
