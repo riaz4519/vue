@@ -2,7 +2,7 @@
 
     <div class="view-profile">
 
-        <h2>Profile for {{ userId }}</h2>
+        <h2>Profile for {{ updateId }}</h2>
 
     </div>
     
@@ -19,18 +19,22 @@
             }
         },
         methods:{
-            updateId() {
 
-              this.userId = this.$route.params.user_id
 
-          }
+        },
+        computed:{
+
+            updateId:function () {
+
+                 return this.$route.params.user_id
+
+            }
+
         },
         watch:{
 
-            $route(){
 
 
-            }
 
         }
     }

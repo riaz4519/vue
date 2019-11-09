@@ -1220,11 +1220,95 @@ Section:4
 
     31.Watching the $route Object
 
+       -does not working with watcher but working with computer properties
+
+                    updateId:function () {
+
+                         return this.$route.params.user_id
+
+                    }
+
+    32.more on router links
+
+        -in this we will work with named route with the parameter
+
+            <router-link :to="{name:'about',params:{nameOftheParam:value}}"><router-link>
+
+    33.programmatically Redirecting Users
+
+        -its a way to redirect page from methods
+
+        -redirect to home
+
+            methods:{
+
+                redirectHome:function(){
+
+                    this.$router.push({ name:'nameOfTheRoute' })
+
+                }
+
+            }
+
+        - programmatically go back
+
+            -its access our navigation property from the browser
+
+            methods:{
+                goBack:function(){
+
+                    this.$router.go(-1)
+
+                }
+            }
+
+
+        -programmatically forward
+
+            methods:{
+
+                goForward:function(){
+
+
+                    this.$router.go(1)
+
+                }
+            }
+
+    34.Hash vs History
 
 
 
+    35.styling active link
+
+        -route-link-exact-active
+
+            -this will show if we are at the exact link
+
+        -router-link-active
+
+            -exact and partial both
 
 
+section:5 - Project ninja smoothies
+
+    36.Project Preview and Setup
+
+        -create project
+
+            vue create ninja-smoothies
+
+    37.project structure
+
+    38.material design
+
+        -added cdn of materialize css on index
+
+        -added font of google in index
+
+    39.Navbar Component
+
+    40.index component
 
 
 
