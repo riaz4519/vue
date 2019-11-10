@@ -256,3 +256,52 @@
 		})
 
 		**using where and orderBy together needs to enabled indexing firstS
+
+Firebase Firestore Tutorial #8 - Real-time Data
+
+	//real time listener
+
+	//ge the snapshot of the database
+	db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
+
+	    //get the changes
+
+	    let  changes = snapshot.docChanges();
+
+	    //traversing the changed data
+	    changes.forEach(change => {
+
+	        /*console.log(change.doc.data());*/
+
+	        //added state datas
+	        if (change.type == 'added'){
+
+	            renderCafe(change.doc);
+	        }
+
+	        //with the type of removed
+	        else if (change.type == 'removed'){
+
+	            let li = cafeList.querySelector('[data-id=' + change.doc.id + ']');
+
+	            cafeList.removeChild(li);
+
+	        }
+
+	    });
+
+	});
+
+9.Firebase Firestore Tutorial #9 - Updating Data
+
+//update will be done
+
+	db.collection('cafes').doc(id).update({
+
+		name:'value'
+
+	})
+
+	-update with set 
+
+		db.collec

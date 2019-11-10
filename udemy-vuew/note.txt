@@ -1310,6 +1310,114 @@ section:5 - Project ninja smoothies
 
     40.index component
 
+    41.Deleting(Local) Data
+
+         methods:{
+            deleteSmoothie:function (smoothieId) {
+
+              this.smoothies = this.smoothies.filter( (smoothie)=>{
+
+                return smoothie.id != smoothieId
+
+
+              })
+
+            }
+          }
+
+    42.Introduction to Firebase
+
+        -creating a database
+
+           -goto firebase
+
+           - goto console
+
+           -create project
+                -give country name and project name
+
+    43.setting up Firebase
+
+        -realtime database
+
+        -goto database section
+
+        -create firestore database
+
+        -start with test mode
+
+        -it will create a database
+
+            -there will be collection like table
+            -collection will document like dataset
+
+            -and document will have filed and values
+
+    44.Install Firebase
+
+        -first of all go to the preview of database and collect the
+        credentials for it.
+
+        -install firebase
+
+            -npm install firebase --save
+
+        -import firebase
+
+            import firebase from 'firebase'
+
+        -import firestore
+
+            import firestore from 'firebase/firebase'
+
+        -initialize firebase
+
+            const firebaseApp = firebase.initialize
+
+        -timestamps snapshots
+
+            firebaseApp.firestore().settings({ timestampsInSnapshots:true })
+
+        -analytics
+
+            firebaseApp.analytics()
+
+        -lastly we have to export it to be used
+
+            export default firebaseApp.firestore();
+
+    45.Retrieving Firestore Data
+
+        -first import the database part
+
+            import db from '../firebase/init'
+
+        -send a get request to the database
+
+            db.collection('nameOfTheCollection').get().then(snapshots =>{
+
+                //run foreach
+                snapshots.foreach(doc =>{
+
+                    //to collect data
+                    doc.data()
+
+                    //to collect id
+
+                    doc.id
+
+                    //adding it to the main array
+
+                    let smoothie = doc.data()
+
+                    smoothie.id = doc.id
+
+                    this.smoothies.push(smoothie)
+
+                })
+
+            })
+
 
 
 
