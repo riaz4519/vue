@@ -1479,3 +1479,82 @@ section:5 - Project ninja smoothies
 
     50.Saving Records to Firebase
 
+        -in this we use two new things
+
+            -adding post to the firestore
+
+            -adding slug package
+
+        -adding slug
+
+            -npm install slugify
+
+                import slugify from 'slugify'
+
+                this.slugify = slugify(this.title,{
+
+                    replacement:'-',
+                    remove:/[$*_+~.()'"!\-:@]/g,
+                    lower-=:true
+                })
+
+        -add to firestore
+
+            db.collection('smooties').add({
+
+                title:this.title,
+                ingredients:this.ingredients,
+                slug:this.slug,
+
+
+            }).then(()=>{
+                //redirect
+                this.$router.push({ name:'Home' })
+
+            }).catch(err =>{
+
+                console.log(err)
+            })
+
+    51.Delete Ingredients
+
+
+           this.ingredients = this.ingredients.filter( ingredient =>{
+
+               return ingredient != ing
+
+           })
+
+    52.Edit Smoothie Route
+
+        <router-link :to="{name:'EditSmoothie',params:{ smoothie_slug:smoothie.slug }}"><i class="material-icons edit">edit</i></router-link>
+
+    53.Firebase Queries
+
+        -getting data with where clause
+
+
+           import db from '../firebase/init'
+
+           let ref = db.collection('smooties').where('slug','==',this.$route.params.smoothie_slug)
+
+           //data fetch by get()
+           ref.get().then(snapshot =>{
+
+            snapshot.forEach(doc =>{
+
+                //getting the data
+
+                this.smoothie = doc.data()
+                //getting the id
+                this.smoothie.id = doc.id
+
+            })
+
+           })
+
+
+
+
+
+
