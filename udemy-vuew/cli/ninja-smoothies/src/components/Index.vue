@@ -27,12 +27,18 @@ export default {
   methods:{
     deleteSmoothie:function (smoothieId) {
 
-      this.smoothies = this.smoothies.filter( (smoothie)=>{
+      //delete doc from the firestore
+      db.collection('smooties').doc(smoothieId).delete().then(() =>{
+        this.smoothies = this.smoothies.filter( (smoothie)=>{
 
-        return smoothie.id != smoothieId
+          return smoothie.id != smoothieId
 
 
-      });
+        });
+      })
+
+      //console.log(smoothieId)
+/*     */
 
     }
   },

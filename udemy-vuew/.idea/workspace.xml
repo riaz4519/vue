@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6600b880-3de4-4aae-a6cc-d2c1d5f7ccaa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../firestore/firebase-firestore-playlist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../firestore/firebase-firestore-playlist/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firestore/firebase-firestore-playlist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../firestore/firebase-firestore-playlist/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firestore/note/firebase-firestore-playlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../firestore/note/firebase-firestore-playlist.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cli/ninja-smoothies/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-smoothies/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cli/ninja-smoothies/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-smoothies/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuex/vuex-ninja-2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuex/vuex-ninja-2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuex/vuex-ninja-2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vuex/vuex-ninja-2/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/components/ProductListOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/components/ProductListOne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/components/ProductListTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/components/ProductListTwo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuex/vuex-ninja-2/src/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +22,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.57301587">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -126,13 +120,107 @@
         </leaf>
       </split-second>
     </splitter>
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/note.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="1479" column="33" selection-start-line="1479" selection-start-column="33" selection-end-line="1479" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/AddSmoothie.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+              <folding>
+                <element signature="e#1114#1147#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Navbar.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/firebase/init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> 773a5268ca19982c2db6d4038e578ec855c58e50
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -178,12 +266,17 @@
         <option value="$PROJECT_DIR$/cli/project-router/src/main.js" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/main.js" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/App.vue" />
-        <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Navbar.vue" />
-        <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/package.json" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/firebase/init.js" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/note.txt" />
+=======
+        <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js" />
+        <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Navbar.vue" />
+        <option value="$PROJECT_DIR$/note.txt" />
+        <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/components/AddSmoothie.vue" />
+>>>>>>> 773a5268ca19982c2db6d4038e578ec855c58e50
       </list>
     </option>
   </component>
@@ -199,6 +292,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,7 +346,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,17 +411,31 @@
       <workItem from="1572929016181" duration="7554000" />
       <workItem from="1573013827393" duration="10027000" />
       <workItem from="1573275312097" duration="16084000" />
+<<<<<<< HEAD
       <workItem from="1573371734182" duration="8690000" />
+=======
+      <workItem from="1573371734182" duration="8371000" />
+      <workItem from="1573446196088" duration="6336000" />
+      <workItem from="1573472081787" duration="1332000" />
+>>>>>>> 773a5268ca19982c2db6d4038e578ec855c58e50
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="166234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="173583000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+>>>>>>> 773a5268ca19982c2db6d4038e578ec855c58e50
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19023137" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19591528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -341,7 +448,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3230148" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32242227" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -593,30 +700,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Navbar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="34">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -627,22 +714,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        <state relative-caret-position="646">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/firebase/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="187">
           <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
@@ -652,6 +767,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="1414" column="49" selection-start-line="1414" selection-start-column="49" selection-end-line="1414" selection-end-column="49" />
+=======
+        <state relative-caret-position="287">
+          <caret line="1479" column="33" selection-start-line="1479" selection-start-column="33" selection-end-line="1479" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/AddSmoothie.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+          <folding>
+            <element signature="e#1114#1147#0" expanded="true" />
+          </folding>
+>>>>>>> 773a5268ca19982c2db6d4038e578ec855c58e50
         </state>
       </provider>
     </entry>

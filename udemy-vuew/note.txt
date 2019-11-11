@@ -1392,7 +1392,7 @@ section:5 - Project ninja smoothies
 
             import db from '../firebase/init'
 
-        -send a get request to the database
+        -send a get request to the database from the created lifecycle hook
 
             db.collection('nameOfTheCollection').get().then(snapshots =>{
 
@@ -1418,6 +1418,64 @@ section:5 - Project ninja smoothies
 
             })
 
+    **if pull update from github and the package is not here
+
+        npm install --save firebase
 
 
+    46.Delete Firestore Data
+
+        -we need the id for delete the data
+
+        -need few methods
+
+            -firebase db instance
+
+            -collection() method
+
+            -doc(id) - which will identify the data
+
+            -then the delete() method
+
+            -then we will and a promise next then()
+        -delete
+
+            db.collection('smooties').doc(smoothieId).delete().then( ()=>{
+
+                //here the filter for front end
+
+                    this.smoothies = this.smoothies.filter((smoothie)=>{
+
+                        return smoothie.id != smoothieId
+
+                    })
+
+            })
+
+    47.Add Smoothie Component
+
+        ***need to add forward slash every time we are making a route
+
+        -prevent submit
+
+            <form @submit.prevent="addSmoothie0">
+            </form>
+
+    48.Adding Ingredients
+
+        - @keyDown.tab=""
+
+        -@keyDown.tab.prevent
+
+            -it will prevent the tabs default behaviour
+
+    49.Out Putting ingredients
+            <div v-for="(ing,index) in ingredients" :key="index">
+
+                <label for="ingredient">Ingredient:</label>
+                <input type="text" name="ingredient" v-model="ingredients[index]">
+
+            </div>
+
+    50.Saving Records to Firebase
 
