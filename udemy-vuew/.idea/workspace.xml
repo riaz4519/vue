@@ -62,8 +62,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="49" column="8" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -117,8 +117,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/note.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="274">
-                  <caret line="1405" selection-start-line="1405" selection-end-line="1405" />
+                <state relative-caret-position="427">
+                  <caret line="1414" column="49" selection-start-line="1414" selection-start-column="49" selection-end-line="1414" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -182,8 +182,8 @@
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/router/index.js" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/package.json" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/firebase/init.js" />
-        <option value="$PROJECT_DIR$/note.txt" />
         <option value="$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue" />
+        <option value="$PROJECT_DIR$/note.txt" />
       </list>
     </option>
   </component>
@@ -318,16 +318,15 @@
       <workItem from="1572929016181" duration="7554000" />
       <workItem from="1573013827393" duration="10027000" />
       <workItem from="1573275312097" duration="16084000" />
-      <workItem from="1573371734182" duration="8371000" />
+      <workItem from="1573371734182" duration="8690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165915000" />
+    <option name="totallyTimeSpent" value="166234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19023137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -642,17 +641,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/note.txt">
+    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="1310" column="22" selection-start-line="1310" selection-start-column="22" selection-end-line="1310" selection-end-column="22" />
+        <state relative-caret-position="187">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/Index.vue">
+    <entry file="file://$PROJECT_DIR$/note.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="49" column="8" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+        <state relative-caret-position="427">
+          <caret line="1414" column="49" selection-start-line="1414" selection-start-column="49" selection-end-line="1414" selection-end-column="49" />
         </state>
       </provider>
     </entry>
