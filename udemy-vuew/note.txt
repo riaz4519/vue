@@ -1609,13 +1609,9 @@ Section 6:Project Two-Real-Time Chat App
         -creating app
 
             npm install -g @vue/cli
-            
+
             vue create ninja-chat
 
+    59.Project structure
 
-
-
-
-
-
-
+    60.FireStore Setup
