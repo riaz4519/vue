@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/AddSmoothie.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+            <state relative-caret-position="187">
+              <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
               <folding>
                 <element signature="e#1114#1147#0" expanded="true" />
               </folding>
@@ -309,12 +309,12 @@
       <workItem from="1573275312097" duration="16084000" />
       <workItem from="1573371734182" duration="8371000" />
       <workItem from="1573446196088" duration="6336000" />
-      <workItem from="1573472081787" duration="1332000" />
+      <workItem from="1573472081787" duration="1630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173583000" />
+    <option name="totallyTimeSpent" value="173881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -649,8 +649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cli/ninja-smoothies/src/components/AddSmoothie.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+        <state relative-caret-position="187">
+          <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
           <folding>
             <element signature="e#1114#1147#0" expanded="true" />
           </folding>
