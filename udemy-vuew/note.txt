@@ -1615,3 +1615,275 @@ Section 6:Project Two-Real-Time Chat App
     59.Project structure
 
     60.FireStore Setup
+
+        -installed firebase
+            npm install firebase --save
+
+            import firebase from 'firebase'
+
+            //initialize firebase with config files
+
+                const firebaseApp  = firebase.initializeApp(config)
+
+            //analytics
+            firebaseApp.analytics()
+
+        -installed vue-router
+
+            npm install vue-router --save
+
+    61.Making welcome Screen
+
+    62.Passing props via Routes
+
+        -all this time we were passing props via components .now we will do that with routes
+
+            -first have to tell that route that we are gonna pass props
+
+                {
+
+                    path:'/chat',
+                    name:'Chat',
+                    component:Chat,
+                    props:true
+                }
+
+                -this props:true is telling the route that we will receive props
+
+
+            -sending props value via routes
+                -its no different from the routes params.actually we send props via our params
+
+                    methods:{
+
+                        enterChat:function(){
+
+                            if(this.name){
+
+                                this.$router.push({ name:'Chat',params:{name:this.name} })
+
+                            }
+
+                        }
+
+                    }
+
+                    -here name is the prop
+
+            -receiving prop
+
+                props:['name']
+
+    63.Route Guards
+
+        -route guards check if certain condition are fulfilled when accessing a route or page
+
+        - we will place route guards on the route page
+            index.js
+
+        -declaring a route guard
+
+            -there is many kinds of guard but we will work with 'beforeEnter'
+
+            {
+                path:'/chat',
+                name:'Chat',
+                component:Chat,
+                props:true,
+                beforeEnter:(to,from,next)=>{
+
+                    if(to.params.name){
+
+                        //next is the next route we are going to redirect
+                        next()
+
+                    }else{
+
+                        next({name:'Home'})
+
+                        //we can also enter route name to for redirect
+
+                    }
+
+                }
+
+            }
+
+            -so as we se we have a function which interrupt when we are entering the and check.it have 3 params
+
+                -to
+                    -this parameter tells us where we will go and have all the information.
+                -from
+                    -this tell us where we are from
+                -next
+
+                    -this redirect us to the next route
+
+    64.Creating chat window
+
+        -we separate component via its roles .one component one role
+
+    65.New Message Components
+
+        -Date.now() - for timestamps
+
+    66.adding message to firestore
+
+        ***notes
+            -first if we don't have a database table created but if we name one and add a data it will create one first and then insert that
+            data.
+
+            -when we press enter . it will work as a button submit.
+
+        -add a data to firebase
+
+            -import db first
+
+                import db from '../firebase/init'
+
+            -create a method
+
+                addMessage:function(){
+
+                    db.collection('messages').add({
+
+                        content:this.newMessage,
+                        name:this.name,
+                        timestamp:Date.now()
+
+                    }).catch(err =>{
+
+                        console.log(err)
+
+                    })
+
+                }
+
+
+    67.Real-Time Events (events listeners)
+
+        -we make listener in created life cycle hook so that if data changes in a table that we selected gives us a instant feed back.
+
+        -import db
+
+            import db from '../firebase/init'
+
+        -created life cycle hook
+
+            created(){
+
+
+
+            }
+
+        -fetch from database
+
+            //getting data
+            let ref = db.collection('messages').orderBy('timestamp');
+
+            //taking snapshot
+            ref.onSnapshot(snapshot =>{
+                //getting only the changes
+                snapshot.docChanges().forEach(change =>{
+
+                    if(change.type =='added'){
+
+                        let doc = change.doc
+
+                        this.messages.push({
+
+                            id:doc.id,
+                            name:doc.data().name,
+                            content:doc.data().content,
+                            timestamp:doc.data().timestamp,
+                        })
+
+                    }
+
+                })
+
+            })
+
+        -onSnapshot()
+
+            -this method take a snapshot whenever anything change on database
+
+        -docChanges
+
+            -this method only out put the data which are changes only
+
+        -type added
+
+            -we will look at the changes but changes can be updated or deleted type .but change.type == 'added' means only those which
+            are added.
+
+        -orderBy
+
+            -order define oder by a field
+
+
+    68.Format Times with Moment.js
+
+        -moment is a package for formatting time to human readable format
+
+        -install
+
+            npm install moment --save
+
+        -use
+            import moment from 'moment'
+
+            moment(time).format(format)
+
+    69.Auto Scrolling
+
+        -install
+
+            npm install vue-chat-scroll --save
+
+        -import
+
+            import VueChatScroll from 'vue-chat-scroll'
+
+            Vue.use(VueChatScroll)
+        -use
+
+            <div class="messages" vue-chat-scroll>
+
+            </div>
+
+
+    70.deploy app
+
+        https://medium.com/@ShayneOSullivan/deploy-a-vue-js-app-with-firebase-hosting-3fc420cf3998
+
+        -install firebase tools if you don't have one
+
+            npm install -g firebase-tools
+
+        -login to the firebase
+
+            firebase login
+
+        -now configure the project to firebase with
+
+            firebase init
+
+        -build you app
+
+            npm run build
+
+        -deploy to firebase
+
+            firebase deploy
+
+    71.Project Review
+
+
+
+
+
+
+
+
+
