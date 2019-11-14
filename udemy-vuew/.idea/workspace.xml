@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6600b880-3de4-4aae-a6cc-d2c1d5f7ccaa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/ninja-chat/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-chat/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/ninja-chat/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-chat/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/ninja-chat/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-chat/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/ninja-chat/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-chat/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/ninja-chat/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-chat/src/components/Welcome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/ninja-chat/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/ninja-chat/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
-    </list>
+    <list default="true" id="6600b880-3de4-4aae-a6cc-d2c1d5f7ccaa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +241,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../officeMain/resident.ae/resident-pro" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -316,16 +307,15 @@
       <workItem from="1573561464795" duration="1635000" />
       <workItem from="1573619475828" duration="7171000" />
       <workItem from="1573648796321" duration="6525000" />
-      <workItem from="1573704212542" duration="10706000" />
+      <workItem from="1573704212542" duration="10723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206797000" />
+    <option name="totallyTimeSpent" value="206814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21104388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
