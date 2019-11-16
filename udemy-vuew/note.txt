@@ -1911,6 +1911,29 @@ Section 7:Project Three - Geo Ninja
                 export default firebaseApp.firestore()
 
 
-    75.Map Component
+    75.navbar component
 
-        re-watch
+    76.map component
+
+    77.Google Maps Api
+
+        -go to google
+
+            https://console.developers.google.com/apis/dashboard
+
+        -billing account
+
+        -enable api and services
+            -google maps javascript api
+
+                enable
+            -go to credentials
+
+                -create credentials
+
+                -get  a api key
+        -setup guide
+            
+
+
+
