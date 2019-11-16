@@ -1880,10 +1880,37 @@ Section 6:Project Two-Real-Time Chat App
     71.Project Review
 
 
+Section 7:Project Three - Geo Ninja
+    72.Project Overview & Setup
+
+        -installing without eslint
+        -vue router
+
+    73.Project Structure
+
+        -signup
+        -login
+        -protect
+            -map.vue
+            -profile.vue
+        -setup vue-router
 
 
+    74.setting up firebase
+
+        -npm install firebase
+
+        -setup
+
+            -import firebase from 'firebase'
+            -copy config file from firestore database
+            -
+                const firebaseApp = firebase.initialize(config)
+                firebase.analytics()
+
+                export default firebaseApp.firestore()
 
 
+    75.Map Component
 
-
-
+        re-watch
