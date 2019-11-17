@@ -1879,9 +1879,71 @@ Section 6:Project Two-Real-Time Chat App
     71.Project Review
 
 
+Section 7:Project Three - Geo Ninja
+    72.Project Overview & Setup
+
+        -installing without eslint
+        -vue router
+
+    73.Project Structure
+
+        -signup
+        -login
+        -protect
+            -map.vue
+            -profile.vue
+        -setup vue-router
 
 
+    74.setting up firebase
 
+        -npm install firebase
+
+        -setup
+
+            -import firebase from 'firebase'
+            -copy config file from firestore database
+            -
+                const firebaseApp = firebase.initialize(config)
+                firebase.analytics()
+
+                export default firebaseApp.firestore()
+
+
+    75.navbar component
+
+    76.map component
+
+    77.Google Maps Api
+
+        -go to google
+
+            https://console.developers.google.com/apis/dashboard
+
+        -billing account
+
+        -enable api and services
+            -google maps javascript api
+
+                enable
+            -go to credentials
+
+                -create credentials
+
+                -get  a api key
+        -setup guide
+
+    ***auth from youtube net ninja -Firebase Auth Tutorial
+
+        1.introduction
+
+        2.How firebase auth works
+
+            -first it submit its credentials at the server and the server reply with a verification token
+
+            -first make a data base
+            -then enable authentication with email and password
+            -enable database too
 
 
 
