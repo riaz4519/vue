@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/note.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="1925" column="7" lean-forward="true" selection-start-line="1925" selection-start-column="7" selection-end-line="1925" selection-end-column="7" />
+            <state relative-caret-position="368">
+              <caret line="1931" column="35" lean-forward="true" selection-start-line="1931" selection-start-column="35" selection-end-line="1931" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -208,6 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,7 +262,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,18 +336,19 @@
       <workItem from="1573648796321" duration="6525000" />
       <workItem from="1573704212542" duration="10723000" />
       <workItem from="1573877400803" duration="8562000" />
-      <workItem from="1573909870240" duration="1381000" />
+      <workItem from="1573909870240" duration="2098000" />
+      <workItem from="1574051553050" duration="625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216757000" />
+    <option name="totallyTimeSpent" value="218099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21709532" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22012103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -714,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/note.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="1925" column="7" lean-forward="true" selection-start-line="1925" selection-start-column="7" selection-end-line="1925" selection-end-column="7" />
+        <state relative-caret-position="368">
+          <caret line="1931" column="35" lean-forward="true" selection-start-line="1931" selection-start-column="35" selection-end-line="1931" selection-end-column="35" />
         </state>
       </provider>
     </entry>
