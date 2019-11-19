@@ -1372,7 +1372,7 @@ section:5 - Project ninja smoothies
 
         -initialize firebase
 
-            const firebaseApp = firebase.initialize
+            const firebaseApp = firebase.initialize(config)
 
         -timestamps snapshots
 
@@ -1517,7 +1517,6 @@ section:5 - Project ninja smoothies
             })
 
     51.Delete Ingredients
-
 
            this.ingredients = this.ingredients.filter( ingredient =>{
 
@@ -1933,6 +1932,18 @@ Section 7:Project Three - Geo Ninja
 
                 -get  a api key
         -setup guide
+
+    ***auth from youtube net ninja -Firebase Auth Tutorial
+
+        1.introduction
+
+        2.How firebase auth works
+
+            -first it submit its credentials at the server and the server reply with a verification token
+
+            -first make a data base
+            -then enable authentication with email and password
+            -enable database too
 
 
 
