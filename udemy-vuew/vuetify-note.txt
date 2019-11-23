@@ -1,0 +1,13 @@
+2.setting up vuetify
+
+    -install vue application first
+
+        -npm install -g @vue/cli
+
+        -vue create todo-ninja
+
+    -install vuetify plugin
+
+        -install vue
+
+            https://medium.com/@attiewilly/how-i-married-vuetify-with-typescript-d6441dedd16

@@ -69,4 +69,24 @@
     -if a user is logged out the user value is null
 
 
+9.getting firestore data
+
+    -getting all the data
+
+        db.collection('guide').get().then(snapshot =>{
+
+            const datas = snapshot.docs;
+
+            datas.forEach(data =>{
+
+                console(data.data().title)
+
+            })
+
+        })
+
+10. ui and firestore security rules
+
+
+
 
