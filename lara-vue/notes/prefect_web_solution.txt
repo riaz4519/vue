@@ -1,0 +1,42 @@
+01-
+
+    -connecting app .js and app.css to laravel welcome file or the root file
+	preset
+	
+		-php artisan preset vue
+		-php artisan preset react
+		-php artisan preset bootstrap
+	-npm install 
+	
+	-running dev 
+		npm run dev
+		-this will compile our file through webpack and put it in.resource assets folder
+	**whenever we change something on our vue file we have to run	
+		
+		-npm run dev
+		Or
+		-npm run watch
+	-adding component to laravel 
+		
+		to welcome.blade.php
+			<div id="app">
+			    <example-component></example-component>
+			<div>
+
+    --do not change the public css file or js file
+        those file will be autometically change npm run dev or watcher
+
+    -npm run watch
+        -work like npm run dev but it watch every change and run compile it autometically
+
+    -anything that we will change it will be in resource css and js file
+
+02.
+    npm run prod
+    -became minified
+    -so its secure
+
+    -install vue router latest
+
+        -npm install --save vue-router@latest
+		
