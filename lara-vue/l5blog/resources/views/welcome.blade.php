@@ -49,6 +49,7 @@
 
                     <li class="nav-item">
                         <router-link to="/example" >Example</router-link>
+                        <router-link to="/sample-component" >Sample</router-link>
 
                     </li>
                 </ul>

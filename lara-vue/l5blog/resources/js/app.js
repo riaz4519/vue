@@ -9,6 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import VueRouter from 'vue-router'
+import SampleComponent from "./components/SampleComponent";
 
 Vue.use(VueRouter)
 
@@ -17,7 +18,11 @@ const router = new VueRouter({
     routes:[
         {
            path:'/example',
-           to:ExampleComponent
+           component:ExampleComponent
+        },
+        {
+            path:'/sample-component',
+            component:SampleComponent,
         }
     ]
 
