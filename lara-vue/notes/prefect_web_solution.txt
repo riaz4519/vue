@@ -39,4 +39,25 @@
     -install vue router latest
 
         -npm install --save vue-router@latest
-		
+
+03.Set controller & get data with axios
+
+    -first thing
+
+        php artisan make:request TodoRequest
+
+    -returning with json
+
+        return request()->json(200,$todos)
+
+    -what run dev watch do
+
+        -compile the js and css of resource folder and puts them on public css and js folder
+
+    -how to solve csrf error
+
+        -add csrf token to the file
+
+        -its been check to bootstrap.js file
+
+04.Pagination

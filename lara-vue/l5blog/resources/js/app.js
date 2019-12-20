@@ -10,12 +10,15 @@ require('./bootstrap');
 window.Vue = require('vue');
 import VueRouter from 'vue-router'
 import SampleComponent from "./components/SampleComponent";
+import TasksComponent from "./components/TasksComponent";
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
 
+    mode:"history",
     routes:[
+
         {
            path:'/example',
            component:ExampleComponent
@@ -23,6 +26,10 @@ const router = new VueRouter({
         {
             path:'/sample-component',
             component:SampleComponent,
+        },
+        {
+            path:"/",
+            component:TasksComponent,
         }
     ]
 
