@@ -61,3 +61,16 @@
         -its been check to bootstrap.js file
 
 04.Pagination
+
+    -install laravel vue pagination
+        - npm install laravel-vue-pagination --save
+
+        -problem
+            -do not register locally register globally on app.js
+            -data fetching problem
+
+                -https://github.com/gilbitron/laravel-vue-pagination/issues/18 - sunscreem commented on May 24, 2018
+    -link for solution
+        -https://www.itsolutionstuff.com/post/laravel-vue-js-pagination-example-with-demoexample.html
+
+05.insert record using vue js
