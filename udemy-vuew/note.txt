@@ -57,7 +57,7 @@ section 2 :
 
         v-bind - is a directive
 
-        we can bind attribute with it .and after binding we can execute variable ther
+        we can bind attribute with it .and after binding we can execute variable there
         like normal data object
 
        -how it works
@@ -604,7 +604,7 @@ section 2 :
 
                 <child-component @nameOftheemit="actionmethod" />
 
-                -this method will have any parenthesis
+                -this method will not have any parenthesis
 
                 methods:{
 
@@ -637,10 +637,10 @@ section 2 :
         -why we need event bus instead of custom event?
 
             -when we were using custom events we send back the event to the parent component then we have changed the value
-            from the root .But in event but need not to do that .because event bus is global it can listen from anywhere.
+            from the root .But in event bus need not to do that .because event bus is global it can listen from anywhere.
 
 
-        -where to crate event bus
+        -where to create event bus
             -we can create event but any where but have to import it from there first.so the best practice is to create it on
             main.js and then import
 
