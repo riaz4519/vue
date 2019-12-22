@@ -61,3 +61,47 @@
         -its been check to bootstrap.js file
 
 04.Pagination
+
+    -install laravel vue pagination
+        - npm install laravel-vue-pagination --save
+
+        -problem
+            -do not register locally register globally on app.js
+            -data fetching problem
+
+                -https://github.com/gilbitron/laravel-vue-pagination/issues/18 - sunscreem commented on May 24, 2018
+    -link for solution
+        -https://www.itsolutionstuff.com/post/laravel-vue-js-pagination-example-with-demoexample.html
+
+05.insert record using vue js
+
+    -first we will create a modal
+    -trigger the modal and we will see it
+    -then we will add the v-model to the name field
+
+    -after clicking the save change where we have added a click event @addRecord it will send a post
+    request via axios
+
+        addRecord:function(){
+
+            axios.post('/tasks',{
+                'name':this.record
+            }).then(data => this.$emit('recordadded',data)).catch(error => console.log(error))
+
+        }
+
+    -after data is created we will send back the new batch of data back.
+    -then we will send data across the component using this.$emit('')
+
+    -and we will receive it from the task component
+
+        <add-modal-component @recordadded="refreshRecord"></add-modal-component>
+
+        refreshRecord(data){
+
+            this.tasks = data.data;
+        }
+
+
+-06
+    Vue js laravel input validation
