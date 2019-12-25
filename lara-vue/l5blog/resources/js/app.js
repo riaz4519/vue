@@ -12,7 +12,6 @@ import VueRouter from 'vue-router'
 import SampleComponent from "./components/SampleComponent";
 import TasksComponent from "./components/TasksComponent";
 
-Vue.component('pagination', require('laravel-vue-pagination'));
 
 Vue.use(VueRouter)
 

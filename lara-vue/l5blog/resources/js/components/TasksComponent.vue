@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <add-modal-component></add-modal-component>
+        <add-modal-component @recordadded="refreshRecord"></add-modal-component>
     </div>
     
 </template>
@@ -28,6 +28,7 @@
 <script>
 
     import AddModalComponent from "./AddModalComponent";
+    import Pagination from 'laravel-vue-pagination';
     export default {
         name: "TasksComponent",
         data(){
@@ -44,12 +45,17 @@
                     .then(response => {
                         this.tasks = response.data;
                     }).catch(error => console.log(error));
+            },
+            refreshRecord(data){
+
+                this.tasks = data.data;
             }
 
         },
         components:{
 
-            AddModalComponent
+            AddModalComponent,
+            Pagination,
         },
         created(){
 

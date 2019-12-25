@@ -1864,8 +1864,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "AddModalComponent"
+  name: "AddModalComponent",
+  data: function data() {
+    return {
+      record: '',
+      success: '',
+      created: false,
+      errors: []
+    };
+  },
+  methods: {
+    addRecord: function addRecord() {
+      var _this = this;
+
+      axios.post('/tasks', {
+        'name': this.record
+      }).then(function (data) {
+        _this.$emit('recordadded', data);
+
+        _this.created = true;
+        _this.success = "Task Added Successfully";
+        _this.record = '';
+      })["catch"](function (error) {
+        _this.errors = error.response.data.errors.name;
+        console.log(_this.errors);
+      }); //empty the record
+    },
+    closeModal: function closeModal() {
+      this.record = '';
+      this.success = '';
+      this.created = false;
+    }
+  }
 });
 
 /***/ }),
@@ -1938,6 +1979,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AddModalComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddModalComponent */ "./resources/js/components/AddModalComponent.vue");
+/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js");
+/* harmony import */ var laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -1965,6 +2008,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "TasksComponent",
@@ -1983,10 +2027,14 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
+    },
+    refreshRecord: function refreshRecord(data) {
+      this.tasks = data.data;
     }
   },
   components: {
-    AddModalComponent: _AddModalComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
+    AddModalComponent: _AddModalComponent__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Pagination: laravel_vue_pagination__WEBPACK_IMPORTED_MODULE_1___default.a
   },
   created: function created() {
     var _this2 = this;
@@ -37984,87 +38032,129 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "addModal",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "addModalTitle",
-          "aria-hidden": "true"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-dialog-centered",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-header" }, [
-                _c(
-                  "h5",
-                  {
-                    staticClass: "modal-title",
-                    attrs: { id: "exampleModalLongTitle" }
+  return _c(
+    "div",
+    {
+      staticClass: "modal fade",
+      attrs: {
+        id: "addModal",
+        tabindex: "-1",
+        role: "dialog",
+        "aria-labelledby": "addModalTitle",
+        "aria-hidden": "true"
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-dialog-centered",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "h5",
+                {
+                  staticClass: "modal-title",
+                  attrs: { id: "exampleModalLongTitle" }
+                },
+                [_vm._v("Add New Record")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: {
+                    type: "button",
+                    "data-dismiss": "modal",
+                    "aria-label": "Close"
                   },
-                  [_vm._v("Add New Record")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
+                  on: { click: _vm.closeModal }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("×")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _vm.success.length > 0 && this.record.length < 1
+                ? _c("p", { staticClass: "alert alert-success" }, [
+                    _vm._v(_vm._s(_vm.success))
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+              _vm._v(" "),
+              _c("textarea", {
+                directives: [
                   {
-                    staticClass: "close",
-                    attrs: {
-                      type: "button",
-                      "data-dismiss": "modal",
-                      "aria-label": "Close"
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.record,
+                    expression: "record"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { name: "name", id: "name" },
+                domProps: { value: _vm.record },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
                     }
-                  },
-                  [
-                    _c("span", { attrs: { "aria-hidden": "true" } }, [
-                      _vm._v("×")
-                    ])
-                  ]
-                )
-              ]),
+                    _vm.record = $event.target.value
+                  }
+                }
+              }),
               _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }),
+              _vm.errors.length > 0
+                ? _c(
+                    "ul",
+                    { staticClass: "list-unstyled" },
+                    _vm._l(_vm.errors, function(error) {
+                      return _c("li", { staticClass: "alert alert-danger" }, [
+                        _vm._v(_vm._s(error))
+                      ])
+                    }),
+                    0
+                  )
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary",
+                  attrs: { type: "button", "data-dismiss": "modal" },
+                  on: { click: _vm.closeModal }
+                },
+                [_vm._v("Close")]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "modal-footer" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { type: "button", "data-dismiss": "modal" }
-                  },
-                  [_vm._v("Close")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "btn btn-primary", attrs: { type: "button" } },
-                  [_vm._v("Save changes")]
-                )
-              ])
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "button" },
+                  on: { click: _vm.addRecord }
+                },
+                [_vm._v("Save changes")]
+              )
             ])
-          ]
-        )
-      ]
-    )
-  }
-]
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38204,7 +38294,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("add-modal-component")
+      _c("add-modal-component", { on: { recordadded: _vm.refreshRecord } })
     ],
     1
   )
@@ -53345,7 +53435,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
-Vue.component('pagination', __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js"));
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: "history",

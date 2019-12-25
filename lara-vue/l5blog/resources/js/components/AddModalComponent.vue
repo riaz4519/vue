@@ -8,16 +8,26 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Add New Record</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" @click="closeModal" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
 
+                    <p class="alert alert-success" v-if="success.length >0 && this.record.length <1">{{ success }}</p>
+                    <label for="name">Name</label>
+                    <textarea name="name" id="name" class="form-control" v-model="record"></textarea>
+
+                    <ul class="list-unstyled" v-if="errors.length > 0">
+
+                        <li class="alert alert-danger" v-for="error in errors">{{ error }}</li>
+
+                    </ul>
+
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" @click="closeModal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" v-on:click="addRecord">Save changes</button>
                 </div>
             </div>
         </div>
@@ -26,7 +36,46 @@
 
 <script>
     export default {
-        name: "AddModalComponent"
+        name: "AddModalComponent",
+        data(){
+            return{
+
+                record:'',
+                success:'',
+                created:false,
+                errors:[],
+
+            }
+        },
+        methods:{
+
+            addRecord:function(){
+
+                axios.post('/tasks',{
+                    'name':this.record
+                }).then(data => {
+                    this.$emit('recordadded',data);
+                    this.created = true;
+                    this.success = "Task Added Successfully";
+                    this.record = '';
+
+                }).catch(error => {
+
+                    this.errors = error.response.data.errors.name;
+                    console.log(this.errors);
+                });
+
+                //empty the record
+
+            },
+            closeModal:function () {
+
+                this.record = '';
+                this.success = '';
+                this.created = false;
+
+            }
+        }
     }
 </script>
 
