@@ -8,17 +8,22 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Add New Record</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" @click="clearModal" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="alert alert-success" v-if="success.length >0 && this.record.length <1">{{ success }}</p>
+                    <p class="alert alert-success" v-if="success.length >0">{{ success }}</p>
                     <label for="name">Name</label>
                     <textarea name="name" id="name" class="form-control" v-model="record"></textarea>
+
+                    <ul class="list-unstyled" v-if="errors.length > 0">
+                        <li v-for="error in errors" class="text-danger">{{ error }}</li>
+
+                    </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" @click="clearModal" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" v-on:click="addRecord">Save changes</button>
                 </div>
             </div>
@@ -34,6 +39,7 @@
 
                 record:'',
                 success:'',
+                errors:[],
                 created:false
             }
         },
@@ -47,11 +53,22 @@
                     this.$emit('recordadded',data);
                     this.created = true;
                     this.success = "Task Added Successfully";
-                }).catch(error => console.log(error));
+                    this.record = '';
+
+                }).catch(error =>{
+                    this.errors = error.response.data.errors.name;
+
+                } );
 
                 //empty the record
-                this.record = '';
 
+            },
+            clearModal:function () {
+
+                this.errors = [];
+                this.success = '';
+                this.record = '';
+                //this.created = false;
             }
         }
     }
