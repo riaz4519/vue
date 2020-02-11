@@ -1871,14 +1871,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+>>>>>>> bd6560d8d92ff3e3fceee7af70ee0ce4e0b476f1
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AddModalComponent",
   data: function data() {
     return {
       record: '',
       success: '',
+<<<<<<< HEAD
       errors: [],
       created: false
+=======
+      created: false,
+      errors: []
+>>>>>>> bd6560d8d92ff3e3fceee7af70ee0ce4e0b476f1
     };
   },
   methods: {
@@ -1895,12 +1906,22 @@ __webpack_require__.r(__webpack_exports__);
         _this.record = '';
       })["catch"](function (error) {
         _this.errors = error.response.data.errors.name;
+<<<<<<< HEAD
       }); //empty the record
     },
     clearModal: function clearModal() {
       this.errors = [];
       this.success = '';
       this.record = ''; //this.created = false;
+=======
+        console.log(_this.errors);
+      }); //empty the record
+    },
+    closeModal: function closeModal() {
+      this.record = '';
+      this.success = '';
+      this.created = false;
+>>>>>>> bd6560d8d92ff3e3fceee7af70ee0ce4e0b476f1
     }
   }
 });
@@ -38068,7 +38089,11 @@ var render = function() {
                     "data-dismiss": "modal",
                     "aria-label": "Close"
                   },
+<<<<<<< HEAD
                   on: { click: _vm.clearModal }
+=======
+                  on: { click: _vm.closeModal }
+>>>>>>> bd6560d8d92ff3e3fceee7af70ee0ce4e0b476f1
                 },
                 [
                   _c("span", { attrs: { "aria-hidden": "true" } }, [
@@ -38114,7 +38139,11 @@ var render = function() {
                     "ul",
                     { staticClass: "list-unstyled" },
                     _vm._l(_vm.errors, function(error) {
+<<<<<<< HEAD
                       return _c("li", { staticClass: "text-danger" }, [
+=======
+                      return _c("li", { staticClass: "alert alert-danger" }, [
+>>>>>>> bd6560d8d92ff3e3fceee7af70ee0ce4e0b476f1
                         _vm._v(_vm._s(error))
                       ])
                     }),
@@ -38129,7 +38158,11 @@ var render = function() {
                 {
                   staticClass: "btn btn-secondary",
                   attrs: { type: "button", "data-dismiss": "modal" },
+<<<<<<< HEAD
                   on: { click: _vm.clearModal }
+=======
+                  on: { click: _vm.closeModal }
+>>>>>>> bd6560d8d92ff3e3fceee7af70ee0ce4e0b476f1
                 },
                 [_vm._v("Close")]
               ),
@@ -53808,8 +53841,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\htdocs\Vue\lara-vue\l5blog\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\htdocs\Vue\lara-vue\l5blog\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Vue\lara-vue\l5blog\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Vue\lara-vue\l5blog\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
