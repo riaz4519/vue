@@ -8,9 +8,9 @@
                     <div class="card-body">
                         <ul class="list-group" >
                             <li class="list-group-item" v-for="task in tasks.data">{{ task.id}}-{{ task.name}} <span class="float-right">
-                                <button class="btn btn-outline-info btn-sm">Edit</button> |
-                                <button class="btn btn-outline-danger btn-sm">Delete</button> |
-                                <button class="btn btn-outline-info btn-sm">Preview</button>
+                                <a data-toggle="modal" href="#editModal" class="btn btn-outline-info btn-sm">Edit</a> |
+                                <button v-on:click="delRecord" class="btn btn-outline-danger btn-sm">Delete</button> |
+                                <a class="btn btn-outline-info btn-sm"  data-toggle="modal" href="#viewModal">Preview</a>
                             </span></li>
                         </ul>
                         <pagination :data="tasks" @pagination-change-page="getResults"></pagination>
@@ -49,6 +49,24 @@
             refreshRecord(data){
 
                 this.tasks = data.data;
+            },
+            updateRecord:function () {
+
+                axios.post('/tasks',{
+                    'name':this.record
+                }).then(data => {
+                    this.$emit('recordadded',data);
+                    this.created = true;
+                    this.success = "Task Added Successfully";
+                    this.record = '';
+
+                }).catch(error => {
+
+                    this.errors = error.response.data.errors.name;
+                    console.log(this.errors);
+                });
+
+
             }
 
         },

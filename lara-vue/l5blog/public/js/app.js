@@ -38275,7 +38275,40 @@ var render = function() {
                   _vm._l(_vm.tasks.data, function(task) {
                     return _c("li", { staticClass: "list-group-item" }, [
                       _vm._v(_vm._s(task.id) + "-" + _vm._s(task.name) + " "),
-                      _vm._m(1, true)
+                      _c("span", { staticClass: "float-right" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-outline-info btn-sm",
+                            attrs: {
+                              "data-toggle": "modal",
+                              href: "#editModal"
+                            }
+                          },
+                          [_vm._v("Edit")]
+                        ),
+                        _vm._v(" |\n                            "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-outline-danger btn-sm",
+                            on: { click: _vm.delRecord }
+                          },
+                          [_vm._v("Delete")]
+                        ),
+                        _vm._v(" |\n                            "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-outline-info btn-sm",
+                            attrs: {
+                              "data-toggle": "modal",
+                              href: "#viewModal"
+                            }
+                          },
+                          [_vm._v("Preview")]
+                        )
+                      ])
                     ])
                   }),
                   0
@@ -38289,7 +38322,7 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _vm._m(2)
+            _vm._m(1)
           ])
         ])
       ]),
@@ -38319,24 +38352,6 @@ var staticRenderFns = [
           },
           [_vm._v("+")]
         )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "float-right" }, [
-      _c("button", { staticClass: "btn btn-outline-info btn-sm" }, [
-        _vm._v("Edit")
-      ]),
-      _vm._v(" |\n                            "),
-      _c("button", { staticClass: "btn btn-outline-danger btn-sm" }, [
-        _vm._v("Delete")
-      ]),
-      _vm._v(" |\n                            "),
-      _c("button", { staticClass: "btn btn-outline-info btn-sm" }, [
-        _vm._v("Preview")
       ])
     ])
   },
