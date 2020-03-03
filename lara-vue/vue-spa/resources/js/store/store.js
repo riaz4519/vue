@@ -54,7 +54,7 @@ export default {
             state.auth_error = payload.error;
 
         },
-        logout(state)
+
     },
 
     actions:{},
