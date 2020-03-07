@@ -1,0 +1,13 @@
+1.we have understand what we will do 
+	-installed laravel 
+	-then install npm install
+
+	-connect app.css and app.js file 
+
+2.Create a SPA with Vue.JS 2, Vue-Router, Vuex and Laravel 5.6 (E02 - Vue-Router & Vuex setup)
+	-install packages 
+		npm install vuex vue-router validate.js
+	-install rest of the dependencies
+		-npm i
+	-preset
+		php artisan preset vue
