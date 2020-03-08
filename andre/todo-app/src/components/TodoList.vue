@@ -3,7 +3,7 @@
 
         <input v-model="newTodo" type="text" class="todo-input" placeholder="what need to be done" @keyup.enter="addTodo">
         <transition-group name="fade" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutDown">
-        <todo-item v-for="(todo,index) in todosFiltered" :key="todo.id" class="todo-item" :todo="todo" :index="index" @removedTodo="removeTodo" @finishedEdit="finishedEdit" :checkAll="!anyRemaining">
+        <todo-item v-for="(todo,index) in todosFiltered" :key="todo.id" class="todo-item" :todo="todo" :index="index"  :checkAll="!anyRemaining">
 
 
 
@@ -138,6 +138,11 @@
                 this.todos.splice(data.index,1,data.todo)
 
             }
+        },
+        created() {
+
+            eventBus.$on('removedTodo',(index) => this.removeTodo(index));
+            eventBus.$on('finishedEdit',(data) => this.finishedEdit(data));
         }
     }
 </script>
