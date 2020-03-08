@@ -3,7 +3,7 @@
 
         <input v-model="newTodo" type="text" class="todo-input" placeholder="what need to be done" @keyup.enter="addTodo">
         <transition-group name="fade" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutDown">
-        <todo-item v-for="(todo,index) in todosFiltered" :key="todo.id" class="todo-item" :todo="todo" :index="index" @removedTodo="removeTodo">
+        <todo-item v-for="(todo,index) in todosFiltered" :key="todo.id" class="todo-item" :todo="todo" :index="index" @removedTodo="removeTodo" @finishedEdit="finishedEdit" :checkAll="!anyRemaining">
 
 
 
@@ -70,15 +70,7 @@
 
             }
         },
-        directives:{
 
-            focus:{
-                inserted:function (el) {
-                    el.focus();
-                }
-            }
-
-        },
         computed:{
             remaining(){
                 return this.todos.filter(todo => !todo.completed).length
@@ -133,27 +125,18 @@
                 this.todos.splice(index,1);
 
             },
-            editTodo(todo){
 
-                todo.editing = true;
-
-
-            },
-            doneEdit(todo){
-                todo.editing = false;
-            },
-            cancelEdit(todo){
-
-
-                todo.editing = false;
-
-            },
             checkAllTodos(){
                 this.todos.forEach((todo) => todo.completed = event.target.checked)
             },
             clearCompleted(){
 
                 this.todos = this.todos.filter(todo => !todo.completed)
+            },
+            finishedEdit(data){
+
+                this.todos.splice(data.index,1,data.todo)
+
             }
         }
     }
