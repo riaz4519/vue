@@ -10,7 +10,7 @@
 
         <div>
             <button @click="pluralize">Plural</button>
-            <span class="remove-item" @click="removeTodo(index)">
+            <span class="remove-item" @click="removeTodo(id)">
                 &times;
             </span>
         </div>
@@ -66,9 +66,10 @@
 
         methods:{
 
-            removeTodo(index){
+            removeTodo(id){
 
-                eventBus.$emit('removedTodo',index);
+                const index = this.$store.state.todos.findIndex(item => item.id == id)
+                this.$store.state.todos.splice(index,1);
 
             },
             editTodo(){
@@ -79,7 +80,16 @@
             },
             doneEdit(){
                 this.editing = false;
-                eventBus.$emit('finishedEdit',{
+
+                const index = this.$store.state.todos.findIndex( item => item.id == this.id)
+
+                this.$store.state.todos.splice(index,1,{
+                    id:this.id,
+                    title: this.title,
+                    completed:this.completed,
+                    editing:this.editing
+                })
+/*                eventBus.$emit('finishedEdit',{
                     index:this.index,
                     todo:{
                         id:this.id,
@@ -88,7 +98,7 @@
                         editing:this.editing
 
                     }
-                })
+                })*/
             },
             cancelEdit(){
 
