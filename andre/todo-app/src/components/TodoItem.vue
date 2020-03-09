@@ -63,13 +63,7 @@
                 }
             }
         },
-        created(){
 
-            eventBus.$on('pluralize',this.handlePluralize)
-        },
-        beforeDestroy(){
-            eventBus.$off('pluralize',this.handlePluralize)
-        },
         methods:{
 
             removeTodo(index){
@@ -104,10 +98,8 @@
             },
             pluralize(){
 
-                eventBus.$emit('pluralize');
-            },
-            handlePluralize(){
-                this.title = this.title + 's';
+
+                this.title = this.title + "s";
                 eventBus.$emit('finishedEdit',{
                     index:this.index,
                     todo:{
@@ -118,7 +110,8 @@
 
                     }
                 })
-            }
+            },
+
         }
     }
 </script>
