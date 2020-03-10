@@ -9,17 +9,18 @@
 <script>
     export default {
         name: "TodoFilter",
-        data(){
+        computed:{
+            filter(){
 
-            return {
-                filter:'all',
+                return this.$store.state.filter;
             }
         },
         methods:{
 
             changeFilter(filter){
-                this.filter = filter;
-                eventBus.$emit('filterChanged',this.filter);
+                this.$store.commit('updateFilter',filter)
+
+
             }
         }
     }
