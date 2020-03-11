@@ -50,31 +50,11 @@
 
                 newTodo:'',
                 idForTodo:3,
-                filter:'all',
-                todos:[
-
-                    {
-                        id:1,
-                        title:'Finish vue screencast',
-                        completed:false,
-                        editing:false
-                    },
-                    {
-                        id:2,
-                        title:'Take over world',
-                        completed:false,
-                        editing:false
-                    }
-                ],
-                beforeEditCache:''
-
             }
         },
 
         computed:{
-            remaining(){
-                return this.$store.getters.remaining
-            },
+
             anyRemaining(){
 
                 return this.$store.getters.anyRemaining
@@ -84,10 +64,6 @@
 
                 return this.$store.getters.todosFiltered;
             },
-            showClearCompletedButton(){
-
-                return this.$store.getters.showClearCompletedButton;
-            }
 
         },
         methods:{
@@ -97,7 +73,7 @@
                     return
                 }
 
-                this.$store.commit('addTodo',{
+                this.$store.dispatch('addTodo',{
                     id:this.idForTodo,
                     title:this.newTodo,
                     completed:false,
@@ -111,6 +87,9 @@
             },
 
         },
+        created() {
+            this.$store.dispatch('retriveTodos');
+        }
 
     }
 </script>

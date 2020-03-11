@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
+axios.defaults.baseURL = "http://localhost:8000/api";
 
 export const store  =  new Vuex.Store({
 
@@ -9,7 +11,7 @@ export const store  =  new Vuex.Store({
         filter:'all',
         todos:[
 
-            {
+   /*         {
                 id:1,
                 title:'Finish vue screencast',
                 completed:false,
@@ -20,7 +22,7 @@ export const store  =  new Vuex.Store({
                 title:'Take over world',
                 completed:false,
                 editing:false
-            }
+            }*/
         ],
     },
     getters:{
@@ -59,6 +61,7 @@ export const store  =  new Vuex.Store({
             state.todos.push(todo)
         },
         clearCompleted(state){
+
             state.todos = state.todos.filter(todo => !todo.completed)
 
         },
@@ -81,6 +84,112 @@ export const store  =  new Vuex.Store({
                 completed:todo.completed,
                 editing:todo.editing
             })
+        },
+        retriveTodos(state,todos){
+
+            state.todos = todos
+
+        }
+    },
+    actions:{
+        addTodo(context,todo){
+
+            axios.post('/todos',{
+                title:todo.title,
+                completed:todo.completed,
+            })
+            .then(response => {
+                context.commit('addTodo',response.data)
+            })
+            .catch(error =>{
+                console.log(error)
+            });
+
+
+
+
+        },
+        clearCompleted(context){
+
+            const completed = store.state.todos.
+            filter(todo => todo.completed)
+                .map(todo => todo.id);
+            axios.delete('/todosDeleteCompleted',{
+                data:{
+                    todos:completed
+                }
+            })
+                .then(response => {
+                    context.commit('clearCompleted')
+                })
+                .catch(error =>{
+                    console.log(error)
+                });
+
+        },
+        updateFilter(context,filter){
+
+
+                context.commit('updateFilter',filter)
+
+
+        },
+        checkAll(context,checked){
+
+            axios.patch('/todosCheckAll',{
+                completed:checked,
+            })
+                .then(response => {
+                    context.commit('checkAll',checked)
+                })
+                .catch(error =>{
+                    console.log(error)
+                });
+
+
+
+        },
+        deleteTodo(context,id){
+
+
+            axios.delete('/todos/'+id)
+                .then(response => {
+                    context.commit('deleteTodo',response.data)
+                })
+                .catch(error =>{
+                    console.log(error)
+                });
+
+
+        },
+        updateTodo(context,todo){
+
+
+            axios.patch('/todos/'+todo.id,{
+                title:todo.title,
+                completed:todo.completed,
+            })
+            .then(response => {
+                context.commit('updateTodo',response.data)
+            })
+            .catch(error =>{
+                console.log(error)
+            });
+
+
+
+        },
+        retriveTodos(context){
+
+            axios.get('/todos')
+                .then(response => {
+                   context.commit('retriveTodos',response.data)
+                })
+                .catch(error =>{
+                    console.log(error)
+                });
+
+
         }
     }
 
